@@ -31,6 +31,7 @@
             this.QuizTitelLabel = new System.Windows.Forms.Label();
             this.UitlegQuizBtn = new System.Windows.Forms.Button();
             this.StartQuizBtn = new System.Windows.Forms.Button();
+            this.TerugBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // QuizTitelLabel
@@ -52,6 +53,7 @@
             this.UitlegQuizBtn.TabIndex = 1;
             this.UitlegQuizBtn.Text = "Uitleg";
             this.UitlegQuizBtn.UseVisualStyleBackColor = true;
+            this.UitlegQuizBtn.Click += new System.EventHandler(this.UitlegQuizBtn_Click);
             // 
             // StartQuizBtn
             // 
@@ -62,12 +64,24 @@
             this.StartQuizBtn.TabIndex = 2;
             this.StartQuizBtn.Text = "Start";
             this.StartQuizBtn.UseVisualStyleBackColor = true;
+            this.StartQuizBtn.Click += new System.EventHandler(this.StartQuizBtn_Click);
+            // 
+            // TerugBtn
+            // 
+            this.TerugBtn.Location = new System.Drawing.Point(653, 482);
+            this.TerugBtn.Name = "TerugBtn";
+            this.TerugBtn.Size = new System.Drawing.Size(119, 67);
+            this.TerugBtn.TabIndex = 3;
+            this.TerugBtn.Text = "Terug";
+            this.TerugBtn.UseVisualStyleBackColor = true;
+            this.TerugBtn.Click += new System.EventHandler(this.TerugBtn_Click);
             // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.TerugBtn);
             this.Controls.Add(this.StartQuizBtn);
             this.Controls.Add(this.UitlegQuizBtn);
             this.Controls.Add(this.QuizTitelLabel);
@@ -83,5 +97,6 @@
         private System.Windows.Forms.Label QuizTitelLabel;
         private System.Windows.Forms.Button UitlegQuizBtn;
         private System.Windows.Forms.Button StartQuizBtn;
+        private System.Windows.Forms.Button TerugBtn;
     }
 }
