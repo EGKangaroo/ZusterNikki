@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ZusterNikki
 {
-    public partial class HoofdMenu : Form
+    public partial class Quiz : Form
     {
-        public HoofdMenu()
+        public Quiz()
         {
             InitializeComponent();
-        }
-
-        private void HoofdMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ZusterNikkiLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

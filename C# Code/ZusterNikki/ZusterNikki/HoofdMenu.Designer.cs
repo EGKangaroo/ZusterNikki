@@ -39,11 +39,12 @@
             // 
             this.ZusterNikkiLabel.AutoSize = true;
             this.ZusterNikkiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZusterNikkiLabel.Location = new System.Drawing.Point(431, 99);
+            this.ZusterNikkiLabel.Location = new System.Drawing.Point(248, 108);
             this.ZusterNikkiLabel.Name = "ZusterNikkiLabel";
             this.ZusterNikkiLabel.Size = new System.Drawing.Size(171, 33);
             this.ZusterNikkiLabel.TabIndex = 0;
             this.ZusterNikkiLabel.Text = "Zuster Nikki";
+            this.ZusterNikkiLabel.Click += new System.EventHandler(this.ZusterNikkiLabel_Click);
             // 
             // GalgjeBtn
             // 
@@ -85,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 580);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.UitlogBtn);
             this.Controls.Add(this.AdlibBtn);
             this.Controls.Add(this.QuizBtn);
@@ -93,6 +94,7 @@
             this.Controls.Add(this.ZusterNikkiLabel);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
+            this.Load += new System.EventHandler(this.HoofdMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
