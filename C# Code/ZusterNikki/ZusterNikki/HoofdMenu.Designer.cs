@@ -39,21 +39,16 @@
             // 
             this.ZusterNikkiLabel.AutoSize = true;
             this.ZusterNikkiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.ZusterNikkiLabel.Location = new System.Drawing.Point(248, 108);
-=======
-            this.ZusterNikkiLabel.Location = new System.Drawing.Point(575, 122);
+            this.ZusterNikkiLabel.Location = new System.Drawing.Point(324, 143);
             this.ZusterNikkiLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 2d7f3671b1136ff81c010a0a11e1c22046efe4b5
             this.ZusterNikkiLabel.Name = "ZusterNikkiLabel";
             this.ZusterNikkiLabel.Size = new System.Drawing.Size(215, 42);
             this.ZusterNikkiLabel.TabIndex = 0;
             this.ZusterNikkiLabel.Text = "Zuster Nikki";
-            this.ZusterNikkiLabel.Click += new System.EventHandler(this.ZusterNikkiLabel_Click);
             // 
             // GalgjeBtn
             // 
-            this.GalgjeBtn.Location = new System.Drawing.Point(279, 304);
+            this.GalgjeBtn.Location = new System.Drawing.Point(177, 240);
             this.GalgjeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.GalgjeBtn.Name = "GalgjeBtn";
             this.GalgjeBtn.Size = new System.Drawing.Size(100, 28);
@@ -64,7 +59,7 @@
             // 
             // QuizBtn
             // 
-            this.QuizBtn.Location = new System.Drawing.Point(279, 340);
+            this.QuizBtn.Location = new System.Drawing.Point(177, 276);
             this.QuizBtn.Margin = new System.Windows.Forms.Padding(4);
             this.QuizBtn.Name = "QuizBtn";
             this.QuizBtn.Size = new System.Drawing.Size(100, 28);
@@ -74,7 +69,7 @@
             // 
             // AdlibBtn
             // 
-            this.AdlibBtn.Location = new System.Drawing.Point(279, 375);
+            this.AdlibBtn.Location = new System.Drawing.Point(177, 311);
             this.AdlibBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AdlibBtn.Name = "AdlibBtn";
             this.AdlibBtn.Size = new System.Drawing.Size(100, 28);
@@ -84,7 +79,7 @@
             // 
             // UitlogBtn
             // 
-            this.UitlogBtn.Location = new System.Drawing.Point(279, 411);
+            this.UitlogBtn.Location = new System.Drawing.Point(177, 347);
             this.UitlogBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UitlogBtn.Name = "UitlogBtn";
             this.UitlogBtn.Size = new System.Drawing.Size(100, 28);
@@ -97,11 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(784, 561);
-=======
-            this.ClientSize = new System.Drawing.Size(1500, 714);
->>>>>>> 2d7f3671b1136ff81c010a0a11e1c22046efe4b5
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.UitlogBtn);
             this.Controls.Add(this.AdlibBtn);
             this.Controls.Add(this.QuizBtn);
@@ -110,11 +101,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
-<<<<<<< HEAD
-            this.Load += new System.EventHandler(this.HoofdMenu_Load);
-=======
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdMenu_FormClosing);
->>>>>>> 2d7f3671b1136ff81c010a0a11e1c22046efe4b5
             this.ResumeLayout(false);
             this.PerformLayout();
 
