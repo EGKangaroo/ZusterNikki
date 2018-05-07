@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ZusterNikki
 {
-    public partial class Form1 : Form
+    public partial class Inlog : Form
     {
-        public Form1()
+        public Inlog()
         {
             InitializeComponent();
         }
