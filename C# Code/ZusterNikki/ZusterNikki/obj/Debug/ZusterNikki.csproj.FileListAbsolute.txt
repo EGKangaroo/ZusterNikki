@@ -8,3 +8,4 @@ C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterN
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.exe
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.pdb
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.HoofdMenu.resources
+C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.GalgjeScherm.resources
