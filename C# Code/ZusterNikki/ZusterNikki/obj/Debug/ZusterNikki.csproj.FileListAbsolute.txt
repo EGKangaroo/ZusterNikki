@@ -10,3 +10,15 @@ C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterN
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.HoofdMenu.resources
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.GalgjeScherm.resources
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Quiz.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\bin\Debug\ZusterNikki.exe.config
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\bin\Debug\ZusterNikki.exe
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\bin\Debug\ZusterNikki.pdb
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.csprojResolveAssemblyReference.cache
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.GalgjeScherm.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.HoofdMenu.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Properties.Resources.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Quiz.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.csproj.GenerateResource.Cache
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.exe
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.pdb
