@@ -48,7 +48,7 @@ namespace ZusterNikki
                 MessageBox.Show("Je hangt!");
             }
 
-            PBXHangMan.ImageLocation = "guessesLeft" + nieuwSpel.GuessesLeft + ".png";
+            PBXHangMan.ImageLocation = "images/guessesLeft" + nieuwSpel.GuessesLeft + ".png";
         }
 
         //checks for valid textbox input, only allows controls (i.e. backspace) and letter input

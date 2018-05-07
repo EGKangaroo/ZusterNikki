@@ -62,9 +62,9 @@
             // BTNLogIn
             // 
             this.BTNLogIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNLogIn.Location = new System.Drawing.Point(267, 165);
+            this.BTNLogIn.Location = new System.Drawing.Point(267, 167);
             this.BTNLogIn.Name = "BTNLogIn";
-            this.BTNLogIn.Size = new System.Drawing.Size(259, 78);
+            this.BTNLogIn.Size = new System.Drawing.Size(259, 76);
             this.BTNLogIn.TabIndex = 0;
             this.BTNLogIn.Text = "Inloggen";
             this.BTNLogIn.UseVisualStyleBackColor = true;
@@ -73,9 +73,9 @@
             // BTNNewAccount
             // 
             this.BTNNewAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNNewAccount.Location = new System.Drawing.Point(3, 165);
+            this.BTNNewAccount.Location = new System.Drawing.Point(3, 167);
             this.BTNNewAccount.Name = "BTNNewAccount";
-            this.BTNNewAccount.Size = new System.Drawing.Size(258, 78);
+            this.BTNNewAccount.Size = new System.Drawing.Size(258, 76);
             this.BTNNewAccount.TabIndex = 1;
             this.BTNNewAccount.Text = "Nieuw Account";
             this.BTNNewAccount.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // TBPassword
             // 
             this.TBPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TBPassword.Location = new System.Drawing.Point(267, 110);
+            this.TBPassword.Location = new System.Drawing.Point(267, 112);
             this.TBPassword.Name = "TBPassword";
             this.TBPassword.Size = new System.Drawing.Size(177, 22);
             this.TBPassword.TabIndex = 2;
@@ -92,7 +92,7 @@
             // TBName
             // 
             this.TBName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TBName.Location = new System.Drawing.Point(267, 29);
+            this.TBName.Location = new System.Drawing.Point(267, 30);
             this.TBName.Name = "TBName";
             this.TBName.Size = new System.Drawing.Size(177, 22);
             this.TBName.TabIndex = 3;
@@ -112,7 +112,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 113);
+            this.label2.Location = new System.Drawing.Point(168, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 17);
@@ -127,6 +127,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Login";
             this.Text = "Inloggen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
