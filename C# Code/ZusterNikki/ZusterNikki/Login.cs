@@ -23,10 +23,16 @@ namespace ZusterNikki
         }
 
         //methods/events
-        private void BTNInloggen_Click(object sender, EventArgs e)
+        private void MakeMainMenu()
         {
             this.Hide();
+            HoofdMenu newMainMenu = new HoofdMenu();
+            newMainMenu.Show();
+        }
 
+        private void BTNInloggen_Click(object sender, EventArgs e)
+        {
+            MakeMainMenu();
         }
     }
 }
