@@ -24,17 +24,6 @@ namespace ZusterNikki
         {
             InitializeComponent();
         }
-
-<<<<<<< HEAD
-        private void HoofdMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ZusterNikkiLabel_Click(object sender, EventArgs e)
-        {
-
-=======
         private void MakeNewScreen(screenselect click)
         {
             switch (click)
@@ -69,7 +58,6 @@ namespace ZusterNikki
         private void HoofdMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
->>>>>>> 2d7f3671b1136ff81c010a0a11e1c22046efe4b5
         }
     }
 }
