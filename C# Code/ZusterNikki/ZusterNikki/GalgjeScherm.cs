@@ -77,6 +77,7 @@ namespace ZusterNikki
             BTNGuessLetter.Enabled = true;
         }
 
+        //button lets the user return to main menu
         private void BTNBackToMain_Click(object sender, EventArgs e)
         {
             HoofdMenu newMainMenu = new HoofdMenu();
@@ -84,6 +85,7 @@ namespace ZusterNikki
             this.Dispose();
         }
 
+        //if the x button is pressed, the whole application should close, not just the form
         private void GalgjeScherm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

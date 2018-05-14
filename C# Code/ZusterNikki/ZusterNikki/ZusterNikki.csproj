@@ -45,6 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdLibs.cs" />
+    <Compile Include="AdLibsResultScherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdLibsResultScherm.Designer.cs">
+      <DependentUpon>AdLibsResultScherm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdLibsScherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdLibsScherm.Designer.cs">
+      <DependentUpon>AdLibsScherm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GalgjeScherm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +88,12 @@
     <Compile Include="QuizHandler.cs" />
     <Compile Include="QuizVragen.cs" />
     <Compile Include="Woord.cs" />
+    <EmbeddedResource Include="AdLibsResultScherm.resx">
+      <DependentUpon>AdLibsResultScherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdLibsScherm.resx">
+      <DependentUpon>AdLibsScherm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GalgjeScherm.resx">
       <DependentUpon>GalgjeScherm.cs</DependentUpon>
     </EmbeddedResource>

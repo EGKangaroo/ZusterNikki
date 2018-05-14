@@ -30,10 +30,12 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.percMarginPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.BTNNewGame = new System.Windows.Forms.Button();
-            this.percMarginPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.BTNGuessLetter = new System.Windows.Forms.Button();
+            this.percMarginPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.BTNBackToMain = new System.Windows.Forms.Button();
+            this.percMarginPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.BTNNewGame = new System.Windows.Forms.Button();
             this.percMarginPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TBGuessLetter = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,17 +44,15 @@
             this.LBLGuessesLeft = new System.Windows.Forms.Label();
             this.LBLWord = new System.Windows.Forms.Label();
             this.PBXHangMan = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.BTNBackToMain = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.percMarginPanel3.SuspendLayout();
             this.percMarginPanel2.SuspendLayout();
             this.percMarginPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBXHangMan)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -90,6 +90,36 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(776, 105);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.Controls.Add(this.BTNGuessLetter, 1, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(197, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(188, 99);
+            this.tableLayoutPanel5.TabIndex = 3;
+            // 
+            // BTNGuessLetter
+            // 
+            this.BTNGuessLetter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTNGuessLetter.Enabled = false;
+            this.BTNGuessLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNGuessLetter.Location = new System.Drawing.Point(12, 7);
+            this.BTNGuessLetter.Name = "BTNGuessLetter";
+            this.BTNGuessLetter.Size = new System.Drawing.Size(163, 83);
+            this.BTNGuessLetter.TabIndex = 0;
+            this.BTNGuessLetter.Text = "Raad";
+            this.BTNGuessLetter.UseVisualStyleBackColor = true;
+            this.BTNGuessLetter.Click += new System.EventHandler(this.BTNGuessLetter_Click);
+            // 
             // percMarginPanel3
             // 
             this.percMarginPanel3.ColumnCount = 3;
@@ -109,17 +139,17 @@
             this.percMarginPanel3.Size = new System.Drawing.Size(188, 99);
             this.percMarginPanel3.TabIndex = 2;
             // 
-            // BTNNewGame
+            // BTNBackToMain
             // 
-            this.BTNNewGame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNNewGame.Location = new System.Drawing.Point(12, 7);
-            this.BTNNewGame.Name = "BTNNewGame";
-            this.BTNNewGame.Size = new System.Drawing.Size(163, 83);
-            this.BTNNewGame.TabIndex = 0;
-            this.BTNNewGame.Text = "Nieuw";
-            this.BTNNewGame.UseVisualStyleBackColor = true;
-            this.BTNNewGame.Click += new System.EventHandler(this.BTNNewGame_Click);
+            this.BTNBackToMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTNBackToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNBackToMain.Location = new System.Drawing.Point(12, 7);
+            this.BTNBackToMain.Name = "BTNBackToMain";
+            this.BTNBackToMain.Size = new System.Drawing.Size(163, 83);
+            this.BTNBackToMain.TabIndex = 2;
+            this.BTNBackToMain.Text = "Menu";
+            this.BTNBackToMain.UseVisualStyleBackColor = true;
+            this.BTNBackToMain.Click += new System.EventHandler(this.BTNBackToMain_Click);
             // 
             // percMarginPanel2
             // 
@@ -138,17 +168,17 @@
             this.percMarginPanel2.Size = new System.Drawing.Size(188, 99);
             this.percMarginPanel2.TabIndex = 1;
             // 
-            // BTNGuessLetter
+            // BTNNewGame
             // 
-            this.BTNGuessLetter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNGuessLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNGuessLetter.Location = new System.Drawing.Point(12, 7);
-            this.BTNGuessLetter.Name = "BTNGuessLetter";
-            this.BTNGuessLetter.Size = new System.Drawing.Size(163, 83);
-            this.BTNGuessLetter.TabIndex = 0;
-            this.BTNGuessLetter.Text = "Raad";
-            this.BTNGuessLetter.UseVisualStyleBackColor = true;
-            this.BTNGuessLetter.Click += new System.EventHandler(this.BTNGuessLetter_Click);
+            this.BTNNewGame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTNNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNNewGame.Location = new System.Drawing.Point(12, 7);
+            this.BTNNewGame.Name = "BTNNewGame";
+            this.BTNNewGame.Size = new System.Drawing.Size(163, 83);
+            this.BTNNewGame.TabIndex = 0;
+            this.BTNNewGame.Text = "Nieuw";
+            this.BTNNewGame.UseVisualStyleBackColor = true;
+            this.BTNNewGame.Click += new System.EventHandler(this.BTNNewGame_Click);
             // 
             // percMarginPanel1
             // 
@@ -256,39 +286,9 @@
             this.PBXHangMan.TabIndex = 1;
             this.PBXHangMan.TabStop = false;
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.Controls.Add(this.BTNGuessLetter, 1, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(197, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(188, 99);
-            this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // BTNBackToMain
-            // 
-            this.BTNBackToMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNBackToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNBackToMain.Location = new System.Drawing.Point(12, 7);
-            this.BTNBackToMain.Name = "BTNBackToMain";
-            this.BTNBackToMain.Size = new System.Drawing.Size(163, 83);
-            this.BTNBackToMain.TabIndex = 2;
-            this.BTNBackToMain.Text = "Menu";
-            this.BTNBackToMain.UseVisualStyleBackColor = true;
-            this.BTNBackToMain.Click += new System.EventHandler(this.BTNBackToMain_Click);
-            // 
             // GalgjeScherm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -299,6 +299,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GalgjeScherm_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.percMarginPanel3.ResumeLayout(false);
             this.percMarginPanel2.ResumeLayout(false);
             this.percMarginPanel1.ResumeLayout(false);
@@ -307,7 +308,6 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBXHangMan)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -43,7 +43,7 @@ namespace ZusterNikki
         private Char[] ChooseRandomWord()
         {
             Random chooseWord = new Random();
-            FileStream filestream = new FileStream("WordFile.txt", FileMode.Open, FileAccess.Read);
+            FileStream filestream = new FileStream("galgje/WordFile.txt", FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(filestream);
             List<string> allWords = new List<string>();
             string line = reader.ReadLine();
@@ -54,6 +54,7 @@ namespace ZusterNikki
                 line = reader.ReadLine();
             }
 
+            reader.Close();
             string chosenWord = allWords[chooseWord.Next(allWords.Count)];
             Char[] charArray = chosenWord.ToCharArray();
             return charArray;

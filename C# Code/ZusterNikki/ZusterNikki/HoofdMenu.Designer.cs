@@ -66,6 +66,7 @@
             this.QuizBtn.TabIndex = 2;
             this.QuizBtn.Text = "Quiz";
             this.QuizBtn.UseVisualStyleBackColor = true;
+            this.QuizBtn.Click += new System.EventHandler(this.QuizBtn_Click);
             // 
             // AdlibBtn
             // 
@@ -76,6 +77,7 @@
             this.AdlibBtn.TabIndex = 3;
             this.AdlibBtn.Text = "Adlibs";
             this.AdlibBtn.UseVisualStyleBackColor = true;
+            this.AdlibBtn.Click += new System.EventHandler(this.AdlibBtn_Click);
             // 
             // UitlogBtn
             // 
@@ -90,14 +92,14 @@
             // 
             // HoofdMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.UitlogBtn);
             this.Controls.Add(this.AdlibBtn);
             this.Controls.Add(this.QuizBtn);
             this.Controls.Add(this.GalgjeBtn);
             this.Controls.Add(this.ZusterNikkiLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
