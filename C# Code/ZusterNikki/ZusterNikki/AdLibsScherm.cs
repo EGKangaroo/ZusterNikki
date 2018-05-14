@@ -74,7 +74,7 @@ namespace ZusterNikki
             }
 
             adLibs.MakeStory(input);
-            AdLibsResultScherm newResult = new AdLibsResultScherm(adLibs.Story);
+            AdLibsResultScherm newResult = new AdLibsResultScherm(adLibs.Story, adLibs.Title);
             newResult.Show();
             this.Dispose();
         }
