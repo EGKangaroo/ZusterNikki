@@ -72,6 +72,8 @@
     <Compile Include="Quiz.Designer.cs">
       <DependentUpon>Quiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuizHandler.cs" />
+    <Compile Include="QuizVragen.cs" />
     <Compile Include="Woord.cs" />
     <EmbeddedResource Include="GalgjeScherm.resx">
       <DependentUpon>GalgjeScherm.cs</DependentUpon>
