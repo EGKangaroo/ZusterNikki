@@ -25,4 +25,9 @@ C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterN
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsResultScherm.resources
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsScherm.resources
 C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Login.resources
+<<<<<<< HEAD
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.csprojResolveAssemblyReference.cache
+=======
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsResultScherm.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsScherm.resources
+>>>>>>> dd1b0f8b0b253a3759a8f57c95bf7806ae8b4c86
