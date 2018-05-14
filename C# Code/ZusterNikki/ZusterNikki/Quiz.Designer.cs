@@ -39,8 +39,12 @@
             this.Antwoord2Btn = new System.Windows.Forms.Button();
             this.Antwoord3Btn = new System.Windows.Forms.Button();
             this.Antwoord4Btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.counterGoed = new System.Windows.Forms.Label();
+            this.CounterFout = new System.Windows.Forms.Label();
+            this.Goedcounter = new System.Windows.Forms.Label();
+            this.Foutcounter = new System.Windows.Forms.Label();
+            this.ResultaatLabel = new System.Windows.Forms.Label();
+            this.OpnieuwBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // QuizTitelLabel
@@ -167,31 +171,81 @@
             this.Antwoord4Btn.Visible = false;
             this.Antwoord4Btn.Click += new System.EventHandler(this.Antwoord4Btn_Click);
             // 
-            // label1
+            // counterGoed
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(619, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "label1";
+            this.counterGoed.AutoSize = true;
+            this.counterGoed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.counterGoed.Location = new System.Drawing.Point(663, 51);
+            this.counterGoed.Name = "counterGoed";
+            this.counterGoed.Size = new System.Drawing.Size(0, 24);
+            this.counterGoed.TabIndex = 11;
+            this.counterGoed.Visible = false;
             // 
-            // label2
+            // CounterFout
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(622, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "label2";
+            this.CounterFout.AutoSize = true;
+            this.CounterFout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CounterFout.Location = new System.Drawing.Point(663, 85);
+            this.CounterFout.Name = "CounterFout";
+            this.CounterFout.Size = new System.Drawing.Size(0, 24);
+            this.CounterFout.TabIndex = 12;
+            this.CounterFout.Visible = false;
+            // 
+            // Goedcounter
+            // 
+            this.Goedcounter.AutoSize = true;
+            this.Goedcounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Goedcounter.Location = new System.Drawing.Point(590, 51);
+            this.Goedcounter.Name = "Goedcounter";
+            this.Goedcounter.Size = new System.Drawing.Size(67, 24);
+            this.Goedcounter.TabIndex = 13;
+            this.Goedcounter.Text = "Goed: ";
+            this.Goedcounter.Visible = false;
+            // 
+            // Foutcounter
+            // 
+            this.Foutcounter.AutoSize = true;
+            this.Foutcounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Foutcounter.Location = new System.Drawing.Point(590, 85);
+            this.Foutcounter.Name = "Foutcounter";
+            this.Foutcounter.Size = new System.Drawing.Size(58, 24);
+            this.Foutcounter.TabIndex = 14;
+            this.Foutcounter.Text = "Fout: ";
+            this.Foutcounter.Visible = false;
+            // 
+            // ResultaatLabel
+            // 
+            this.ResultaatLabel.AutoSize = true;
+            this.ResultaatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultaatLabel.Location = new System.Drawing.Point(550, 239);
+            this.ResultaatLabel.Name = "ResultaatLabel";
+            this.ResultaatLabel.Size = new System.Drawing.Size(151, 37);
+            this.ResultaatLabel.TabIndex = 15;
+            this.ResultaatLabel.Text = "Resultaat";
+            this.ResultaatLabel.Visible = false;
+            // 
+            // OpnieuwBtn
+            // 
+            this.OpnieuwBtn.Location = new System.Drawing.Point(523, 391);
+            this.OpnieuwBtn.Name = "OpnieuwBtn";
+            this.OpnieuwBtn.Size = new System.Drawing.Size(75, 55);
+            this.OpnieuwBtn.TabIndex = 16;
+            this.OpnieuwBtn.Text = "Opnieuw";
+            this.OpnieuwBtn.UseVisualStyleBackColor = true;
+            this.OpnieuwBtn.Visible = false;
+            this.OpnieuwBtn.Click += new System.EventHandler(this.OpnieuwBtn_Click);
             // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.OpnieuwBtn);
+            this.Controls.Add(this.ResultaatLabel);
+            this.Controls.Add(this.Foutcounter);
+            this.Controls.Add(this.Goedcounter);
+            this.Controls.Add(this.CounterFout);
+            this.Controls.Add(this.counterGoed);
             this.Controls.Add(this.Antwoord4Btn);
             this.Controls.Add(this.Antwoord3Btn);
             this.Controls.Add(this.Antwoord2Btn);
@@ -205,6 +259,7 @@
             this.Controls.Add(this.QuizTitelLabel);
             this.Name = "Quiz";
             this.Text = "Quiz";
+            this.Load += new System.EventHandler(this.Quiz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +278,11 @@
         private System.Windows.Forms.Button Antwoord2Btn;
         private System.Windows.Forms.Button Antwoord3Btn;
         private System.Windows.Forms.Button Antwoord4Btn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label counterGoed;
+        private System.Windows.Forms.Label CounterFout;
+        private System.Windows.Forms.Label Goedcounter;
+        private System.Windows.Forms.Label Foutcounter;
+        private System.Windows.Forms.Label ResultaatLabel;
+        private System.Windows.Forms.Button OpnieuwBtn;
     }
 }

@@ -18,7 +18,7 @@ namespace ZusterNikki
         int gekozen2;
         int gekozen3;
         int gekozen4;
-        bool Juist;
+        int Juist;
         int juistgeantwoord;
         int foutgeantwoord;
 
@@ -39,6 +39,10 @@ namespace ZusterNikki
 
         private void StartQuizBtn_Click(object sender, EventArgs e)
         {
+            counterGoed.Text = "";
+            CounterFout.Text = "";
+            juistgeantwoord = 0;
+            foutgeantwoord = 0;
             StartQuizBtn.Visible = false;
             UitlegQuizBtn.Visible = false;
             QuizTitelLabel.Visible = false;
@@ -52,6 +56,13 @@ namespace ZusterNikki
             Antwoord3Btn.Location = new Point(200, 370);
             Antwoord4Btn.Visible = true;
             Antwoord4Btn.Location = new Point(370, 370);
+            counterGoed.Visible = true;
+            CounterFout.Visible = true;
+            Foutcounter.Visible = true;
+            Goedcounter.Visible = true;
+            TerugBtn.Visible = false;
+            OpnieuwBtn.Visible = false;
+            
             Updater();
         }
 
@@ -81,6 +92,11 @@ namespace ZusterNikki
             UitlegQuizBtn.Visible = true;
             StartQuizBtn.Visible = true;
             TerugBtn.Visible = true;
+            ResultaatLabel.Text = "";
+            ResultaatLabel.Visible = false;
+            OpnieuwBtn.Visible = false;
+            
+
         }
 
         private void Updater()
@@ -92,6 +108,7 @@ namespace ZusterNikki
             Antwoord3Btn.Text = newGame.Antwoord3;
             Antwoord4Btn.Text = newGame.Antwoord4;
             CorrecteAntwoord = newGame.EchteAntwoord;
+            Juist = 0;
         }
 
         private void Antwoord1Btn_Click(object sender, EventArgs e)
@@ -99,12 +116,12 @@ namespace ZusterNikki
             gekozen1 = 1;
             if (gekozen1.ToString() == CorrecteAntwoord)
             {
-                Juist = true;
+                Juist = 1;
                 Gewonnen();
             }
             if (gekozen1.ToString() != CorrecteAntwoord)
             {
-                Juist = false;
+                Juist = -1;
                 Gewonnen();
             }
 
@@ -115,12 +132,12 @@ namespace ZusterNikki
             gekozen2 = 2;
             if (gekozen2.ToString() == CorrecteAntwoord)
             {
-                Juist = true;
+                Juist = 1;
                 Gewonnen();
             }
             if (gekozen2.ToString() != CorrecteAntwoord)
             {
-                Juist = false;
+                Juist = -1;
                 Gewonnen();
             }
         }
@@ -130,12 +147,12 @@ namespace ZusterNikki
             gekozen3 = 3;
             if (gekozen3.ToString() == CorrecteAntwoord)
             {
-                Juist = true;
+                Juist = 1;
                 Gewonnen();
             }
             if (gekozen3.ToString() != CorrecteAntwoord)
             {
-                Juist = false;
+                Juist = -1;
                 Gewonnen();
             }
         }
@@ -145,38 +162,98 @@ namespace ZusterNikki
             gekozen4 = 4;
             if (gekozen4.ToString() == CorrecteAntwoord)
             {
-                Juist = true;
+                Juist = 1;
                 Gewonnen();
             }
             if (gekozen4.ToString() != CorrecteAntwoord)
             {
-                Juist = false;
+                Juist = -1;
                 Gewonnen();
             }
         }
 
         private void Gewonnen()
         {
-            if (Juist == true)
+            if (Juist == 1)
             {
                 gekozen1 = 0;
                 gekozen2 = 0;
                 gekozen3 = 0;
                 gekozen4 = 0;
-                Updater();
                 juistgeantwoord++;
-                label1.Text = juistgeantwoord.ToString();
+                foutgeantwoord--;
+                counterGoed.Text = juistgeantwoord.ToString();
+                Updater();
             }
-            if (Juist == false)
+            else
             {
                 gekozen1 = 0;
                 gekozen2 = 0;
                 gekozen3 = 0;
                 gekozen4 = 0;
-                Updater();
                 foutgeantwoord++;
-                label2.Text = foutgeantwoord.ToString();
+                CounterFout.Text = foutgeantwoord.ToString();
+                Updater();
             }
+            if (juistgeantwoord == 10 || foutgeantwoord == 10 || juistgeantwoord + foutgeantwoord == 10)
+            {
+                VraagLabel.Visible = false;
+                Antwoord1Btn.Visible = false;
+                Antwoord2Btn.Visible = false;
+                Antwoord3Btn.Visible = false;
+                Antwoord4Btn.Visible = false;
+                counterGoed.Visible = false;
+                CounterFout.Visible = false;
+                Foutcounter.Visible = false;
+                Goedcounter.Visible = false;
+                ResultaatLabel.Visible = true;
+                ResultaatLabel.Location = new Point(200, 200);
+                ResultaatLabel.Text = "Je hebt er " + juistgeantwoord + " goed.";
+                OpnieuwBtn.Visible = true;
+                TerugNaarQuizMenuBtn.Visible = true;
+            }
+        }
+
+        private void OpnieuwBtn_Click(object sender, EventArgs e)
+        {
+            counterGoed.Text = "";
+            CounterFout.Text = "";
+            juistgeantwoord = 0;
+            foutgeantwoord = 0;
+            StartQuizBtn.Visible = false;
+            UitlegQuizBtn.Visible = false;
+            QuizTitelLabel.Visible = false;
+            VraagLabel.Visible = true;
+            VraagLabel.Location = new Point(50, 70);
+            Antwoord1Btn.Visible = true;
+            Antwoord1Btn.Location = new Point(200, 200);
+            Antwoord2Btn.Visible = true;
+            Antwoord2Btn.Location = new Point(370, 200);
+            Antwoord3Btn.Visible = true;
+            Antwoord3Btn.Location = new Point(200, 370);
+            Antwoord4Btn.Visible = true;
+            Antwoord4Btn.Location = new Point(370, 370);
+            counterGoed.Visible = true;
+            CounterFout.Visible = true;
+            Foutcounter.Visible = true;
+            Goedcounter.Visible = true;
+            TerugBtn.Visible = false;
+            OpnieuwBtn.Visible = false;
+            ResultaatLabel.Text = "";
+            TerugNaarQuizMenuBtn.Visible = false;
+            gekozen1 = 0;
+            gekozen2 = 0;
+            gekozen3 = 0;
+            gekozen4 = 0;
+            Juist = 0;
+            juistgeantwoord = 0;
+            foutgeantwoord = 0;
+            Updater();
+        }
+
+        private void Quiz_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
