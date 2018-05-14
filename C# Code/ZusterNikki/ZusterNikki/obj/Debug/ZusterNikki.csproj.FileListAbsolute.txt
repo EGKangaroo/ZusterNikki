@@ -26,3 +26,5 @@ C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterN
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsResultScherm.resources
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsScherm.resources
 C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Login.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsResultScherm.resources
+C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsScherm.resources

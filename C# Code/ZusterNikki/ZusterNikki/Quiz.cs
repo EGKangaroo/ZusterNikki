@@ -81,7 +81,9 @@ namespace ZusterNikki
 
         private void TerugBtn_Click(object sender, EventArgs e)
         {
-
+            HoofdMenu newMainMenu = new HoofdMenu();
+            newMainMenu.Show();
+            this.Dispose();
         }
 
         private void TerugNaarQuizMenuBtn_Click(object sender, EventArgs e)
