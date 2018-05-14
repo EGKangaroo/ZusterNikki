@@ -12,10 +12,11 @@ namespace ZusterNikki
 {
     public partial class AdLibsResultScherm : Form
     {
-        public AdLibsResultScherm(string story)
+        public AdLibsResultScherm(string story, string title)
         {
             InitializeComponent();
             LBLStoryText.Text = story;
+            LBLTitle.Text = title;
         }
 
         private void AdLibsResultScherm_FormClosing(object sender, FormClosingEventArgs e)
