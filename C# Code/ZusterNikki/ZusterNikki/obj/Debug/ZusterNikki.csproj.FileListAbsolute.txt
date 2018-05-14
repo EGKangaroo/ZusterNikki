@@ -23,9 +23,5 @@ C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\De
 C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.exe
 C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.pdb
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Login.resources
-<<<<<<< HEAD
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsResultScherm.resources
 C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.AdLibsScherm.resources
-=======
-C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\obj\Debug\ZusterNikki.Login.resources
->>>>>>> 8731db23ecb56ebcda3c9a43f4b3ad25b17e0c2f
