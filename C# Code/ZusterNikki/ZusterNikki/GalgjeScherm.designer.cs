@@ -295,6 +295,7 @@
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(775, 450);
             this.Name = "GalgjeScherm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Challenge: Galgje";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GalgjeScherm_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -102,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoofdMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoofdMenu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdMenu_FormClosing);
             this.ResumeLayout(false);

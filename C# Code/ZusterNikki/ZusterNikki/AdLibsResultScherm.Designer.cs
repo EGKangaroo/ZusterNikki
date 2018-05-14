@@ -80,6 +80,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AdLibsResultScherm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdLibsResultScherm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdLibsResultScherm_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -78,5 +78,12 @@ namespace ZusterNikki
             newResult.Show();
             this.Dispose();
         }
+
+        private void BTNMainMenu_Click(object sender, EventArgs e)
+        {
+            HoofdMenu newMain = new HoofdMenu();
+            newMain.Show();
+            this.Dispose();
+        }
     }
 }
