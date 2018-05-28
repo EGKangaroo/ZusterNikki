@@ -18,7 +18,17 @@ namespace ZusterNikki
         private static Random rnd = new Random();
         private int[] orderCards;
         private Card[] cards;
-        private static string[] models = new string[8] { "pleister", "spuitje", "stethoscoop", "pillen", "thermometer", "koffer", "handschoenen", "infuus" };
+        private static string[] models = new string[8] 
+        {
+            "Gloves.png",
+            "IV.png",
+            "Pills.png",
+            "Stethoscope.png",
+            "Suitcase.png",
+            "Plaster.png",
+            "Syringe.png",
+            "Temperature.png"
+        };
         private Difficulty gameTileNumber;
         private bool won;
 

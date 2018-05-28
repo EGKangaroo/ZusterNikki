@@ -69,11 +69,11 @@ namespace ZusterNikki
             {
                 if (memory.Cards[i].Flipped)
                 {
-                    cards[i].Text = memory.Cards[i].Model;
+                    cards[i].BackgroundImage = Image.FromFile(@"images\memorytile" + memory.Cards[i].Model);
                 }
                 else
                 {
-                    cards[i].Text = "";
+                    cards[i].BackgroundImage = null;
                 }
             }
 
