@@ -20,6 +20,7 @@ namespace ZusterNikki
         private Card[] cards;
         private static string[] models = new string[8] { "pleister", "spuitje", "stethoscoop", "pillen", "thermometer", "koffer", "handschoenen", "infuus" };
         private Difficulty gameTileNumber;
+        private bool won;
 
         //properties
         public Card[] Cards
@@ -27,9 +28,16 @@ namespace ZusterNikki
             get { return this.cards; }
         }
 
+        public bool Won
+        {
+            get { return this.won; }
+        }
+
         //constructor
         public MemoryGameHandler(Difficulty selectedDifficulty)
         {
+            this.won = false;
+
             //Define game difficulty
             this.gameTileNumber = selectedDifficulty;
 
@@ -71,6 +79,21 @@ namespace ZusterNikki
         }
 
         //methods
+
+        //checks if you have won the game
+        public void CheckWin()
+        {
+            bool won = true;
+            foreach(var card in cards)
+            {
+                if (!card.PairFound)
+                {
+                    won = false;
+                }
+            }
+            Console.WriteLine(won);
+            this.won = won;
+        }
 
         //flip a card
         public void FlipCard(Card selectedCard)
@@ -149,6 +172,8 @@ namespace ZusterNikki
                 {
                     selectedCard.LockPairFound();
                     cards[selectedCard.PairedCard].LockPairFound();
+
+                    CheckWin();
                 }
             }
         }

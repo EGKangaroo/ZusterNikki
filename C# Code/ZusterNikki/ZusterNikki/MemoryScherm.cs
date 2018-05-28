@@ -47,8 +47,8 @@ namespace ZusterNikki
         public void SelectCard(int i)
         {
             memory.FlipCard(memory.Cards[i-1]);
-            UpdateScreen();
             memory.Score(memory.Cards[i-1]);
+            UpdateScreen();
             int j = 0;
             foreach(var card in memory.Cards)
             {
@@ -76,17 +76,28 @@ namespace ZusterNikki
                     cards[i].Text = "";
                 }
             }
+
+            if (memory.Won)
+            {
+                label1.Text = "Je hebt gewonnen! Wil je nog een keer?";
+            }
         }
 
         public void StartGame(Difficulty selectDifficulty)
         {
             memory = new MemoryGameHandler(selectDifficulty);
 
+            foreach(var card in cards)
+            {
+                card.Visible = false;
+            }
+
             for (int i = 0; i < memory.Cards.Length; i++)
             {
                 cards[i].Visible = true;
             }
 
+            label1.Text = "";
             UpdateScreen();
         }
 
