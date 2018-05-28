@@ -32,7 +32,7 @@ namespace ZusterNikki
         public string KiesNieuweVraag()
         {
             Random rand = new Random();
-            i = rand.Next(1, 10);
+            i = rand.Next(1, 50);
             string[] LeesVraag = File.ReadAllLines(@"Quiz\QuizVragen.txt");
             string GekozenVraag = LeesVraag[i];
             return GekozenVraag;

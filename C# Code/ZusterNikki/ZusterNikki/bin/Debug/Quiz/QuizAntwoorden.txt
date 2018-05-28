@@ -8,3 +8,5 @@
 ,zwarte oceaan,pacifische oceaan,ene oceaan,boxtol meer,2,
 ,amsterdam,madrid,lile,munchen,2,
 ,zwemmer,rapper,muzikant,schrijver,3,
+,Ali,Ali,Ali,Ali,4,
+,144,122,120,164,1,

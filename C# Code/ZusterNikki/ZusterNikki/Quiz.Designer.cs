@@ -51,10 +51,9 @@
             // 
             this.QuizTitelLabel.AutoSize = true;
             this.QuizTitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuizTitelLabel.Location = new System.Drawing.Point(16, 398);
-            this.QuizTitelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.QuizTitelLabel.Location = new System.Drawing.Point(12, 323);
             this.QuizTitelLabel.Name = "QuizTitelLabel";
-            this.QuizTitelLabel.Size = new System.Drawing.Size(154, 69);
+            this.QuizTitelLabel.Size = new System.Drawing.Size(122, 55);
             this.QuizTitelLabel.TabIndex = 0;
             this.QuizTitelLabel.Text = "Quiz";
             this.QuizTitelLabel.Visible = false;
@@ -62,10 +61,9 @@
             // UitlegQuizBtn
             // 
             this.UitlegQuizBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UitlegQuizBtn.Location = new System.Drawing.Point(16, 469);
-            this.UitlegQuizBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UitlegQuizBtn.Location = new System.Drawing.Point(12, 381);
             this.UitlegQuizBtn.Name = "UitlegQuizBtn";
-            this.UitlegQuizBtn.Size = new System.Drawing.Size(267, 98);
+            this.UitlegQuizBtn.Size = new System.Drawing.Size(200, 80);
             this.UitlegQuizBtn.TabIndex = 1;
             this.UitlegQuizBtn.Text = "Uitleg";
             this.UitlegQuizBtn.UseVisualStyleBackColor = true;
@@ -75,10 +73,9 @@
             // StartQuizBtn
             // 
             this.StartQuizBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartQuizBtn.Location = new System.Drawing.Point(16, 575);
-            this.StartQuizBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StartQuizBtn.Location = new System.Drawing.Point(12, 467);
             this.StartQuizBtn.Name = "StartQuizBtn";
-            this.StartQuizBtn.Size = new System.Drawing.Size(267, 98);
+            this.StartQuizBtn.Size = new System.Drawing.Size(200, 80);
             this.StartQuizBtn.TabIndex = 2;
             this.StartQuizBtn.Text = "Start";
             this.StartQuizBtn.UseVisualStyleBackColor = true;
@@ -87,10 +84,9 @@
             // 
             // TerugBtn
             // 
-            this.TerugBtn.Location = new System.Drawing.Point(291, 593);
-            this.TerugBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TerugBtn.Location = new System.Drawing.Point(218, 482);
             this.TerugBtn.Name = "TerugBtn";
-            this.TerugBtn.Size = new System.Drawing.Size(159, 82);
+            this.TerugBtn.Size = new System.Drawing.Size(119, 67);
             this.TerugBtn.TabIndex = 3;
             this.TerugBtn.Text = "Terug";
             this.TerugBtn.UseVisualStyleBackColor = true;
@@ -101,10 +97,9 @@
             // 
             this.QuizUitlegLabel.AutoSize = true;
             this.QuizUitlegLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuizUitlegLabel.Location = new System.Drawing.Point(23, 367);
-            this.QuizUitlegLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.QuizUitlegLabel.Location = new System.Drawing.Point(17, 298);
             this.QuizUitlegLabel.Name = "QuizUitlegLabel";
-            this.QuizUitlegLabel.Size = new System.Drawing.Size(136, 31);
+            this.QuizUitlegLabel.Size = new System.Drawing.Size(110, 25);
             this.QuizUitlegLabel.TabIndex = 4;
             this.QuizUitlegLabel.Text = "uitleg quiz";
             this.QuizUitlegLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,10 +107,9 @@
             // 
             // TerugNaarQuizMenuBtn
             // 
-            this.TerugNaarQuizMenuBtn.Location = new System.Drawing.Point(457, 593);
-            this.TerugNaarQuizMenuBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TerugNaarQuizMenuBtn.Location = new System.Drawing.Point(343, 482);
             this.TerugNaarQuizMenuBtn.Name = "TerugNaarQuizMenuBtn";
-            this.TerugNaarQuizMenuBtn.Size = new System.Drawing.Size(159, 79);
+            this.TerugNaarQuizMenuBtn.Size = new System.Drawing.Size(119, 64);
             this.TerugNaarQuizMenuBtn.TabIndex = 5;
             this.TerugNaarQuizMenuBtn.Text = "Terug";
             this.TerugNaarQuizMenuBtn.UseVisualStyleBackColor = true;
@@ -126,20 +120,18 @@
             // 
             this.VraagLabel.AutoSize = true;
             this.VraagLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VraagLabel.Location = new System.Drawing.Point(21, 329);
-            this.VraagLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VraagLabel.Location = new System.Drawing.Point(16, 267);
             this.VraagLabel.Name = "VraagLabel";
-            this.VraagLabel.Size = new System.Drawing.Size(109, 39);
+            this.VraagLabel.Size = new System.Drawing.Size(86, 31);
             this.VraagLabel.TabIndex = 6;
             this.VraagLabel.Text = "label1";
             this.VraagLabel.Visible = false;
             // 
             // Antwoord1Btn
             // 
-            this.Antwoord1Btn.Location = new System.Drawing.Point(29, 63);
-            this.Antwoord1Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Antwoord1Btn.Location = new System.Drawing.Point(22, 51);
             this.Antwoord1Btn.Name = "Antwoord1Btn";
-            this.Antwoord1Btn.Size = new System.Drawing.Size(211, 121);
+            this.Antwoord1Btn.Size = new System.Drawing.Size(158, 98);
             this.Antwoord1Btn.TabIndex = 7;
             this.Antwoord1Btn.Text = "button1";
             this.Antwoord1Btn.UseVisualStyleBackColor = true;
@@ -148,10 +140,9 @@
             // 
             // Antwoord2Btn
             // 
-            this.Antwoord2Btn.Location = new System.Drawing.Point(248, 63);
-            this.Antwoord2Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Antwoord2Btn.Location = new System.Drawing.Point(186, 51);
             this.Antwoord2Btn.Name = "Antwoord2Btn";
-            this.Antwoord2Btn.Size = new System.Drawing.Size(211, 121);
+            this.Antwoord2Btn.Size = new System.Drawing.Size(158, 98);
             this.Antwoord2Btn.TabIndex = 8;
             this.Antwoord2Btn.Text = "button2";
             this.Antwoord2Btn.UseVisualStyleBackColor = true;
@@ -160,10 +151,9 @@
             // 
             // Antwoord3Btn
             // 
-            this.Antwoord3Btn.Location = new System.Drawing.Point(29, 191);
-            this.Antwoord3Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Antwoord3Btn.Location = new System.Drawing.Point(22, 155);
             this.Antwoord3Btn.Name = "Antwoord3Btn";
-            this.Antwoord3Btn.Size = new System.Drawing.Size(211, 121);
+            this.Antwoord3Btn.Size = new System.Drawing.Size(158, 98);
             this.Antwoord3Btn.TabIndex = 9;
             this.Antwoord3Btn.Text = "button3";
             this.Antwoord3Btn.UseVisualStyleBackColor = true;
@@ -172,10 +162,9 @@
             // 
             // Antwoord4Btn
             // 
-            this.Antwoord4Btn.Location = new System.Drawing.Point(248, 191);
-            this.Antwoord4Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Antwoord4Btn.Location = new System.Drawing.Point(186, 155);
             this.Antwoord4Btn.Name = "Antwoord4Btn";
-            this.Antwoord4Btn.Size = new System.Drawing.Size(211, 121);
+            this.Antwoord4Btn.Size = new System.Drawing.Size(158, 98);
             this.Antwoord4Btn.TabIndex = 10;
             this.Antwoord4Btn.Text = "button4";
             this.Antwoord4Btn.UseVisualStyleBackColor = true;
@@ -186,10 +175,9 @@
             // 
             this.counterGoed.AutoSize = true;
             this.counterGoed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.counterGoed.Location = new System.Drawing.Point(884, 63);
-            this.counterGoed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.counterGoed.Location = new System.Drawing.Point(663, 51);
             this.counterGoed.Name = "counterGoed";
-            this.counterGoed.Size = new System.Drawing.Size(0, 29);
+            this.counterGoed.Size = new System.Drawing.Size(0, 24);
             this.counterGoed.TabIndex = 11;
             this.counterGoed.Visible = false;
             // 
@@ -197,10 +185,9 @@
             // 
             this.CounterFout.AutoSize = true;
             this.CounterFout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CounterFout.Location = new System.Drawing.Point(884, 105);
-            this.CounterFout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CounterFout.Location = new System.Drawing.Point(663, 85);
             this.CounterFout.Name = "CounterFout";
-            this.CounterFout.Size = new System.Drawing.Size(0, 29);
+            this.CounterFout.Size = new System.Drawing.Size(0, 24);
             this.CounterFout.TabIndex = 12;
             this.CounterFout.Visible = false;
             // 
@@ -208,10 +195,9 @@
             // 
             this.Goedcounter.AutoSize = true;
             this.Goedcounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Goedcounter.Location = new System.Drawing.Point(787, 63);
-            this.Goedcounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Goedcounter.Location = new System.Drawing.Point(590, 51);
             this.Goedcounter.Name = "Goedcounter";
-            this.Goedcounter.Size = new System.Drawing.Size(85, 29);
+            this.Goedcounter.Size = new System.Drawing.Size(67, 24);
             this.Goedcounter.TabIndex = 13;
             this.Goedcounter.Text = "Goed: ";
             this.Goedcounter.Visible = false;
@@ -220,10 +206,9 @@
             // 
             this.Foutcounter.AutoSize = true;
             this.Foutcounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Foutcounter.Location = new System.Drawing.Point(787, 105);
-            this.Foutcounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Foutcounter.Location = new System.Drawing.Point(590, 85);
             this.Foutcounter.Name = "Foutcounter";
-            this.Foutcounter.Size = new System.Drawing.Size(73, 29);
+            this.Foutcounter.Size = new System.Drawing.Size(58, 24);
             this.Foutcounter.TabIndex = 14;
             this.Foutcounter.Text = "Fout: ";
             this.Foutcounter.Visible = false;
@@ -232,20 +217,18 @@
             // 
             this.ResultaatLabel.AutoSize = true;
             this.ResultaatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultaatLabel.Location = new System.Drawing.Point(733, 294);
-            this.ResultaatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ResultaatLabel.Location = new System.Drawing.Point(550, 239);
             this.ResultaatLabel.Name = "ResultaatLabel";
-            this.ResultaatLabel.Size = new System.Drawing.Size(188, 46);
+            this.ResultaatLabel.Size = new System.Drawing.Size(151, 37);
             this.ResultaatLabel.TabIndex = 15;
             this.ResultaatLabel.Text = "Resultaat";
             this.ResultaatLabel.Visible = false;
             // 
             // OpnieuwBtn
             // 
-            this.OpnieuwBtn.Location = new System.Drawing.Point(697, 481);
-            this.OpnieuwBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OpnieuwBtn.Location = new System.Drawing.Point(523, 391);
             this.OpnieuwBtn.Name = "OpnieuwBtn";
-            this.OpnieuwBtn.Size = new System.Drawing.Size(100, 68);
+            this.OpnieuwBtn.Size = new System.Drawing.Size(75, 55);
             this.OpnieuwBtn.TabIndex = 16;
             this.OpnieuwBtn.Text = "Opnieuw";
             this.OpnieuwBtn.UseVisualStyleBackColor = true;
@@ -254,9 +237,9 @@
             // 
             // Quiz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 690);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.OpnieuwBtn);
             this.Controls.Add(this.ResultaatLabel);
             this.Controls.Add(this.Foutcounter);
@@ -274,7 +257,6 @@
             this.Controls.Add(this.StartQuizBtn);
             this.Controls.Add(this.UitlegQuizBtn);
             this.Controls.Add(this.QuizTitelLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Quiz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz";

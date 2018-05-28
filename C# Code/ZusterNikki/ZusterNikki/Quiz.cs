@@ -21,6 +21,7 @@ namespace ZusterNikki
         int Juist;
         int juistgeantwoord;
         int foutgeantwoord;
+        private QuizVragen NieuweVraag;
 
         private QuizHandler newGame;
         public Quiz()
