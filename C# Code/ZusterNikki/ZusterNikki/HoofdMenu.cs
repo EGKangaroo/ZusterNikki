@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ZusterNikki
 {
-    enum screenselect
+    enum ScreenSelect
     {
         galgje = 0,
         quiz,
         adlibs,
+        memory,
         uitloggen
     }
 
@@ -24,26 +25,31 @@ namespace ZusterNikki
         {
             InitializeComponent();
         }
-        private void MakeNewScreen(screenselect click)
+        private void MakeNewScreen(ScreenSelect click)
         {
             switch(click)
             {
-                case screenselect.galgje:
+                case ScreenSelect.galgje:
                     GalgjeScherm newGalgje = new GalgjeScherm();
                     newGalgje.Show();
                     this.Dispose();
                     break;
-                case screenselect.quiz:
+                case ScreenSelect.quiz:
                     Quiz newQuiz = new Quiz();
                     newQuiz.Show();
                     this.Dispose();
                     break;
-                case screenselect.adlibs:
+                case ScreenSelect.adlibs:
                     AdLibsScherm newAdLibs = new AdLibsScherm();
                     newAdLibs.Show();
                     this.Dispose();
                     break;
-                case screenselect.uitloggen:
+                case ScreenSelect.memory:
+                    MemoryScherm memory = new MemoryScherm();
+                    memory.Show();
+                    this.Dispose();
+                    break;
+                case ScreenSelect.uitloggen:
                     Login newLogin = new Login();
                     newLogin.Show();
                     this.Dispose();
@@ -53,22 +59,27 @@ namespace ZusterNikki
 
         private void GalgjeBtn_Click(object sender, EventArgs e)
         {
-            MakeNewScreen(screenselect.galgje);
+            MakeNewScreen(ScreenSelect.galgje);
         }
 
         private void UitlogBtn_Click(object sender, EventArgs e)
         {
-            MakeNewScreen(screenselect.uitloggen);
+            MakeNewScreen(ScreenSelect.uitloggen);
         }
 
         private void QuizBtn_Click(object sender, EventArgs e)
         {
-            MakeNewScreen(screenselect.quiz);
+            MakeNewScreen(ScreenSelect.quiz);
         }
 
         private void AdlibBtn_Click(object sender, EventArgs e)
         {
-            MakeNewScreen(screenselect.adlibs);
+            MakeNewScreen(ScreenSelect.adlibs);
+        }
+
+        private void BTNMemorySelect_Click(object sender, EventArgs e)
+        {
+            MakeNewScreen(ScreenSelect.memory);
         }
 
         private void HoofdMenu_FormClosing(object sender, FormClosingEventArgs e)

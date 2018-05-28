@@ -23,29 +23,33 @@ namespace ZusterNikki
             adLibs = new AdLibs();
             LBLStoryTitle.Text = adLibs.Title;
 
-            textBoxDict = new Dictionary<int, TextBox>();
-            textBoxDict.Add(1, TBAdVar1);
-            textBoxDict.Add(2, TBAdVar2);
-            textBoxDict.Add(3, TBAdVar3);
-            textBoxDict.Add(4, TBAdVar4);
-            textBoxDict.Add(5, TBAdVar5);
-            textBoxDict.Add(6, TBAdVar6);
-            textBoxDict.Add(7, TBAdVar7);
-            textBoxDict.Add(8, TBAdVar8);
-            textBoxDict.Add(9, TBAdVar9);
-            textBoxDict.Add(10, TBAdVar10);
+            textBoxDict = new Dictionary<int, TextBox>
+            {
+                { 1, TBAdVar1 },
+                { 2, TBAdVar2 },
+                { 3, TBAdVar3 },
+                { 4, TBAdVar4 },
+                { 5, TBAdVar5 },
+                { 6, TBAdVar6 },
+                { 7, TBAdVar7 },
+                { 8, TBAdVar8 },
+                { 9, TBAdVar9 },
+                { 10, TBAdVar10 }
+            };
 
-            labelDict = new Dictionary<int, Label>();
-            labelDict.Add(1, LBLAdVar1);
-            labelDict.Add(2, LBLAdVar2);
-            labelDict.Add(3, LBLAdVar3);
-            labelDict.Add(4, LBLAdVar4);
-            labelDict.Add(5, LBLAdVar5);
-            labelDict.Add(6, LBLAdVar6);
-            labelDict.Add(7, LBLAdVar7);
-            labelDict.Add(8, LBLAdVar8);
-            labelDict.Add(9, LBLAdVar9);
-            labelDict.Add(10, LBLAdVar10);
+            labelDict = new Dictionary<int, Label>
+            {
+                { 1, LBLAdVar1 },
+                { 2, LBLAdVar2 },
+                { 3, LBLAdVar3 },
+                { 4, LBLAdVar4 },
+                { 5, LBLAdVar5 },
+                { 6, LBLAdVar6 },
+                { 7, LBLAdVar7 },
+                { 8, LBLAdVar8 },
+                { 9, LBLAdVar9 },
+                { 10, LBLAdVar10 }
+            };
 
             int i = 1;
             foreach(var word in adLibs.VarWords)

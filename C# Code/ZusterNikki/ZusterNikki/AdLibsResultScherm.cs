@@ -23,5 +23,12 @@ namespace ZusterNikki
         {
             Application.Exit();
         }
+
+        private void BTNBack_Click(object sender, EventArgs e)
+        {
+            HoofdMenu newMain = new HoofdMenu();
+            newMain.Show();
+            this.Dispose();
+        }
     }
 }

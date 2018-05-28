@@ -33,6 +33,7 @@
             this.QuizBtn = new System.Windows.Forms.Button();
             this.AdlibBtn = new System.Windows.Forms.Button();
             this.UitlogBtn = new System.Windows.Forms.Button();
+            this.BTNMemorySelect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ZusterNikkiLabel
@@ -90,10 +91,21 @@
             this.UitlogBtn.UseVisualStyleBackColor = true;
             this.UitlogBtn.Click += new System.EventHandler(this.UitlogBtn_Click);
             // 
+            // BTNMemorySelect
+            // 
+            this.BTNMemorySelect.Location = new System.Drawing.Point(177, 205);
+            this.BTNMemorySelect.Name = "BTNMemorySelect";
+            this.BTNMemorySelect.Size = new System.Drawing.Size(100, 28);
+            this.BTNMemorySelect.TabIndex = 5;
+            this.BTNMemorySelect.Text = "Memory";
+            this.BTNMemorySelect.UseVisualStyleBackColor = true;
+            this.BTNMemorySelect.Click += new System.EventHandler(this.BTNMemorySelect_Click);
+            // 
             // HoofdMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.BTNMemorySelect);
             this.Controls.Add(this.UitlogBtn);
             this.Controls.Add(this.AdlibBtn);
             this.Controls.Add(this.QuizBtn);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Button QuizBtn;
         private System.Windows.Forms.Button AdlibBtn;
         private System.Windows.Forms.Button UitlogBtn;
+        private System.Windows.Forms.Button BTNMemorySelect;
     }
 }

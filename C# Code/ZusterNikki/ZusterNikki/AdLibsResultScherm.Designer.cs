@@ -31,6 +31,7 @@
             this.LBLStoryText = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LBLTitle = new System.Windows.Forms.Label();
+            this.BTNBack = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.Controls.Add(this.LBLStoryText, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.LBLTitle, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BTNBack, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -72,6 +74,17 @@
             this.LBLTitle.Size = new System.Drawing.Size(93, 32);
             this.LBLTitle.TabIndex = 1;
             this.LBLTitle.Text = "label1";
+            // 
+            // BTNBack
+            // 
+            this.BTNBack.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BTNBack.Location = new System.Drawing.Point(635, 484);
+            this.BTNBack.Name = "BTNBack";
+            this.BTNBack.Size = new System.Drawing.Size(144, 66);
+            this.BTNBack.TabIndex = 2;
+            this.BTNBack.Text = "Terug";
+            this.BTNBack.UseVisualStyleBackColor = true;
+            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
             // 
             // AdLibsResultScherm
             // 
@@ -94,5 +107,6 @@
         private System.Windows.Forms.Label LBLStoryText;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label LBLTitle;
+        private System.Windows.Forms.Button BTNBack;
     }
 }
