@@ -17,6 +17,251 @@ namespace ZusterNikki
 
         //methods
 
+        //make new account function, returns whether is has succeeded or not
+        public bool MakeNewAccount(string password, string passwordCopy, string name)
+        {
+            bool accountMade = true;
+
+            if (!password.Equals(passwordCopy))
+            {
+                Console.WriteLine("Password not equal");
+                return !accountMade;
+            }
+
+            if (!CheckValidAccountName(name))
+            {
+                Console.WriteLine("not a valid account name");
+                return !accountMade;
+            }
+
+            CreateNewAccount(name, password);
+
+            return accountMade;
+        }
+
+        //overload for when the account maker also specifies they have a patient number
+        public bool MakeNewAccount(string password, string passwordCopy, string name, int patientNumber)
+        {
+            bool accountMade = true;
+
+            if (!password.Equals(passwordCopy))
+            {
+                Console.WriteLine("Password not equal");
+                return !accountMade;
+            }
+
+            if (!CheckValidPatientNumber(patientNumber))
+            {
+                Console.WriteLine("Not a valid number");
+                return !accountMade;
+            }
+
+            if (!CheckUniquePatientID(patientNumber))
+            {
+                Console.WriteLine("Not a unique number");
+                return !accountMade;
+            }
+
+            if (!CheckValidAccountName(name))
+            {
+                Console.WriteLine("not a valid account name");
+                return !accountMade;
+            }
+
+            CreateNewAccount(name, password, patientNumber);
+
+            return accountMade;
+        }
+
+        //inserts a new row into the player database to make a new account
+        private void CreateNewAccount(string name, string password)
+        {
+
+            using(SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO Player (Username, Password) Values (@nm, @pw)";
+
+                using(SqlCommand MakeAccount = new SqlCommand(query, connection))
+                {
+                    MakeAccount.Parameters.AddWithValue("@nm", name);
+                    MakeAccount.Parameters.AddWithValue("@pw", password);
+
+                    MakeAccount.ExecuteNonQuery();
+                }
+            }
+        }
+
+        //override to insert a new row into player database when a patient number is specified
+        private void CreateNewAccount(string name, string password, int patientNumber)
+        {
+            using (SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO Player (Username, Password, Age, Gender, PatientId) Values (@nm, @pw, @ag, @gn, @pn)";
+
+                using (SqlCommand MakeAccount = new SqlCommand(query, connection))
+                {
+                    MakeAccount.Parameters.AddWithValue("@nm", name);
+                    MakeAccount.Parameters.AddWithValue("@pw", password);
+                    MakeAccount.Parameters.AddWithValue("@ag", GetAge(patientNumber));
+                    MakeAccount.Parameters.AddWithValue("@gn", GetGender(patientNumber));
+                    MakeAccount.Parameters.AddWithValue("@pn", patientNumber);
+
+                    MakeAccount.ExecuteNonQuery();
+                }
+            }
+        }
+
+        //gets age from specified patientId
+        private int GetAge(int patientNumber)
+        {
+            int age = 0;
+
+            using(SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "SELECT Age FROM Patient WHERE Id = @id";
+
+                using(SqlCommand ReadAge = new SqlCommand(query, connection))
+                {
+
+                    ReadAge.Parameters.AddWithValue("@id", patientNumber);
+
+                    using (SqlDataReader reader = ReadAge.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            age = reader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+
+            return age;
+        }
+
+        //gets name from specified patientID
+        private string GetGender(int patientNumber)
+        {
+            string name = "";
+
+            using (SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "SELECT Gender FROM Patient WHERE Id = @id";
+
+                using (SqlCommand ReadAge = new SqlCommand(query, connection))
+                {
+                    ReadAge.Parameters.AddWithValue("@id", patientNumber);
+
+                    using (SqlDataReader reader = ReadAge.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            name = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+
+            return name;
+        }
+
+        //checks whether the patient number that was given is valid
+        private bool CheckValidPatientNumber(int patientNumber)
+        {
+            bool validId = false;
+
+            using(SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "SELECT Id FROM Patient";
+
+                using(SqlCommand CheckValidId = new SqlCommand(query, connection))
+                {
+                    using(SqlDataReader reader = CheckValidId.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            if (reader.GetInt32(0).Equals(patientNumber))
+                            {
+                                validId = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return validId;
+        }
+
+        //checks whether the given patientnumber is not already in the player database
+        private bool CheckUniquePatientID(int patientNumber)
+        {
+            bool unique = true;
+            using(SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "SELECT PatientId FROM Player";
+
+                using (SqlCommand CheckUniqueID = new SqlCommand(query, connection))
+                {
+                    using(SqlDataReader reader = CheckUniqueID.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (!reader.IsDBNull(0))
+                            {
+                                if (reader.GetInt32(0).Equals(patientNumber))
+                                {
+                                    unique = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return unique;
+        }
+
+        //Check valid username
+        private bool CheckValidAccountName(string name)
+        {
+            bool validName = true;
+
+            using(SqlConnection connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+
+                string query = "SELECT Username FROM Player";
+
+                using(SqlCommand CheckValidUsername = new SqlCommand(query, connection))
+                {
+                    using(SqlDataReader reader = CheckValidUsername.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(0).Equals(name))
+                            {
+                                validName = false;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return validName;
+        }
+
         //update player score function
         public void UpdateScore(Player player)
         {

@@ -79,6 +79,7 @@
             this.BTNNewAccount.TabIndex = 1;
             this.BTNNewAccount.Text = "Nieuw Account";
             this.BTNNewAccount.UseVisualStyleBackColor = true;
+            this.BTNNewAccount.Click += new System.EventHandler(this.BTNNewAccount_Click);
             // 
             // TBPassword
             // 

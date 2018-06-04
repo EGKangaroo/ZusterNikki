@@ -51,5 +51,13 @@ namespace ZusterNikki
         {
             Application.Exit();
         }
+
+        private void BTNNewAccount_Click(object sender, EventArgs e)
+        {
+            NieuwAccount nieuw = new NieuwAccount();
+            nieuw.Show();
+
+            this.Hide();
+        }
     }
 }
