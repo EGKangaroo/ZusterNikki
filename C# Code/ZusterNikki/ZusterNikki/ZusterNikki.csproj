@@ -100,6 +100,7 @@
     <Compile Include="MemoryScherm.Designer.cs">
       <DependentUpon>MemoryScherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quiz.cs">
@@ -110,6 +111,7 @@
     </Compile>
     <Compile Include="QuizHandler.cs" />
     <Compile Include="QuizVragen.cs" />
+    <Compile Include="SQLHandler.cs" />
     <Compile Include="Woord.cs" />
     <EmbeddedResource Include="AdLibsResultScherm.resx">
       <DependentUpon>AdLibsResultScherm.cs</DependentUpon>

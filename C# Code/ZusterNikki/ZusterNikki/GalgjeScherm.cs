@@ -13,12 +13,14 @@ namespace ZusterNikki
     public partial class GalgjeScherm : Form
     {
         //fields
+        Player player;
         private Galgje nieuwSpel;
 
         //constructors
-        public GalgjeScherm()
+        public GalgjeScherm(Player player)
         {
             InitializeComponent();
+            this.player = player;
         }
 
         //methods
@@ -64,7 +66,7 @@ namespace ZusterNikki
         //lets the user guess the letter specified in the textbox
         private void BTNGuessLetter_Click(object sender, EventArgs e)
         {
-            nieuwSpel.Guess(TBGuessLetter.Text);
+            nieuwSpel.Guess(TBGuessLetter.Text, player);
             RefreshScreen();
         }
 
@@ -80,7 +82,7 @@ namespace ZusterNikki
         //button lets the user return to main menu
         private void BTNBackToMain_Click(object sender, EventArgs e)
         {
-            HoofdMenu newMainMenu = new HoofdMenu();
+            HoofdMenu newMainMenu = new HoofdMenu(player);
             newMainMenu.Show();
             this.Dispose();
         }
@@ -88,6 +90,8 @@ namespace ZusterNikki
         //if the x button is pressed, the whole application should close, not just the form
         private void GalgjeScherm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SQLHandler sql = new SQLHandler();
+            sql.UpdateScore(player);
             Application.Exit();
         }
     }

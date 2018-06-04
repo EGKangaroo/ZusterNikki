@@ -34,6 +34,8 @@
             this.AdlibBtn = new System.Windows.Forms.Button();
             this.UitlogBtn = new System.Windows.Forms.Button();
             this.BTNMemorySelect = new System.Windows.Forms.Button();
+            this.LBLGreetingText = new System.Windows.Forms.Label();
+            this.LBLScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ZusterNikkiLabel
@@ -101,10 +103,31 @@
             this.BTNMemorySelect.UseVisualStyleBackColor = true;
             this.BTNMemorySelect.Click += new System.EventHandler(this.BTNMemorySelect_Click);
             // 
+            // LBLGreetingText
+            // 
+            this.LBLGreetingText.AutoSize = true;
+            this.LBLGreetingText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLGreetingText.Location = new System.Drawing.Point(326, 382);
+            this.LBLGreetingText.Name = "LBLGreetingText";
+            this.LBLGreetingText.Size = new System.Drawing.Size(125, 25);
+            this.LBLGreetingText.TabIndex = 6;
+            this.LBLGreetingText.Text = "GreetingText";
+            // 
+            // LBLScore
+            // 
+            this.LBLScore.AutoSize = true;
+            this.LBLScore.Location = new System.Drawing.Point(331, 422);
+            this.LBLScore.Name = "LBLScore";
+            this.LBLScore.Size = new System.Drawing.Size(76, 17);
+            this.LBLScore.TabIndex = 7;
+            this.LBLScore.Text = "Score Text";
+            // 
             // HoofdMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.LBLScore);
+            this.Controls.Add(this.LBLGreetingText);
             this.Controls.Add(this.BTNMemorySelect);
             this.Controls.Add(this.UitlogBtn);
             this.Controls.Add(this.AdlibBtn);
@@ -130,5 +153,7 @@
         private System.Windows.Forms.Button AdlibBtn;
         private System.Windows.Forms.Button UitlogBtn;
         private System.Windows.Forms.Button BTNMemorySelect;
+        private System.Windows.Forms.Label LBLGreetingText;
+        private System.Windows.Forms.Label LBLScore;
     }
 }

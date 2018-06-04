@@ -21,35 +21,44 @@ namespace ZusterNikki
 
     public partial class HoofdMenu : Form
     {
-        public HoofdMenu()
+        //field
+        Player player;
+
+        public HoofdMenu(Player player)
         {
             InitializeComponent();
+            this.player = player;
+
+            LBLGreetingText.Text = "Hallo " + player.Name + "! Ik ben Zuster Nikki!";
+            LBLScore.Text = "Je hebt een score van " + player.Score;
         }
         private void MakeNewScreen(ScreenSelect click)
         {
             switch(click)
             {
                 case ScreenSelect.galgje:
-                    GalgjeScherm newGalgje = new GalgjeScherm();
+                    GalgjeScherm newGalgje = new GalgjeScherm(player);
                     newGalgje.Show();
                     this.Dispose();
                     break;
                 case ScreenSelect.quiz:
-                    Quiz newQuiz = new Quiz();
+                    Quiz newQuiz = new Quiz(player);
                     newQuiz.Show();
                     this.Dispose();
                     break;
                 case ScreenSelect.adlibs:
-                    AdLibsScherm newAdLibs = new AdLibsScherm();
+                    AdLibsScherm newAdLibs = new AdLibsScherm(player);
                     newAdLibs.Show();
                     this.Dispose();
                     break;
                 case ScreenSelect.memory:
-                    MemoryScherm memory = new MemoryScherm();
+                    MemoryScherm memory = new MemoryScherm(player);
                     memory.Show();
                     this.Dispose();
                     break;
                 case ScreenSelect.uitloggen:
+                    SQLHandler sql = new SQLHandler();
+                    sql.UpdateScore(player);
                     Login newLogin = new Login();
                     newLogin.Show();
                     this.Dispose();
@@ -84,6 +93,8 @@ namespace ZusterNikki
 
         private void HoofdMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SQLHandler sql = new SQLHandler();
+            sql.UpdateScore(player);
             Application.Exit();
         }
     }

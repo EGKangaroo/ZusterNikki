@@ -13,6 +13,8 @@ namespace ZusterNikki
     public partial class Quiz : Form
     {
         // Field
+        Player player;
+
         string CorrecteAntwoord;
         int gekozen1;
         int gekozen2;
@@ -24,9 +26,10 @@ namespace ZusterNikki
         private QuizVragen NieuweVraag;
 
         private QuizHandler newGame;
-        public Quiz()
+        public Quiz(Player player)
         {
             InitializeComponent();
+            this.player = player;
             QuizTitelLabel.Visible = true;
             QuizTitelLabel.Text = "Quiz";
             QuizTitelLabel.Location = new Point(304, 103);
@@ -82,7 +85,7 @@ namespace ZusterNikki
 
         private void TerugBtn_Click(object sender, EventArgs e)
         {
-            HoofdMenu newMainMenu = new HoofdMenu();
+            HoofdMenu newMainMenu = new HoofdMenu(player);
             newMainMenu.Show();
             this.Dispose();
         }

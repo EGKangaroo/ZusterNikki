@@ -13,13 +13,16 @@ namespace ZusterNikki
     public partial class AdLibsScherm : Form
     {
         //fields
+        Player player;
         AdLibs adLibs;
         Dictionary<int, TextBox> textBoxDict;
         Dictionary<int, Label> labelDict;
 
-        public AdLibsScherm()
+        public AdLibsScherm(Player player)
         {
             InitializeComponent();
+            this.player = player;
+
             adLibs = new AdLibs();
             LBLStoryTitle.Text = adLibs.Title;
 
@@ -63,6 +66,8 @@ namespace ZusterNikki
 
         private void AdLibsScherm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SQLHandler sql = new SQLHandler();
+            sql.UpdateScore(player);
             Application.Exit();
         }
 
@@ -78,14 +83,14 @@ namespace ZusterNikki
             }
 
             adLibs.MakeStory(input);
-            AdLibsResultScherm newResult = new AdLibsResultScherm(adLibs.Story, adLibs.Title);
+            AdLibsResultScherm newResult = new AdLibsResultScherm(adLibs.Story, adLibs.Title, player);
             newResult.Show();
             this.Dispose();
         }
 
         private void BTNMainMenu_Click(object sender, EventArgs e)
         {
-            HoofdMenu newMain = new HoofdMenu();
+            HoofdMenu newMain = new HoofdMenu(player);
             newMain.Show();
             this.Dispose();
         }

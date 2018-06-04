@@ -13,13 +13,16 @@ namespace ZusterNikki
     public partial class MemoryScherm : Form
     {
         //field array cards
+        Player player;
         Button[] cards = new Button[16];
 
         MemoryGameHandler memory;
 
-        public MemoryScherm()
+        public MemoryScherm(Player player)
         {
             InitializeComponent();
+
+            this.player = player;
 
             cards[0] = BTNCard1;
             cards[1] = BTNCard2;
@@ -41,13 +44,15 @@ namespace ZusterNikki
 
         private void MemoryScherm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SQLHandler sql = new SQLHandler();
+            sql.UpdateScore(player);
             Application.Exit();
         }
 
         public void SelectCard(int i)
         {
             memory.FlipCard(memory.Cards[i-1]);
-            memory.Score(memory.Cards[i-1]);
+            memory.Score(memory.Cards[i-1], player);
             UpdateScreen();
             int j = 0;
             foreach(var card in memory.Cards)
@@ -198,7 +203,7 @@ namespace ZusterNikki
 
         private void BTNBack_Click(object sender, EventArgs e)
         {
-            HoofdMenu newMainMenu = new HoofdMenu();
+            HoofdMenu newMainMenu = new HoofdMenu(player);
             newMainMenu.Show();
             this.Dispose();
         }

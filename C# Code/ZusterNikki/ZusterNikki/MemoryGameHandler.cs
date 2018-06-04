@@ -91,7 +91,7 @@ namespace ZusterNikki
         //methods
 
         //checks if you have won the game
-        public void CheckWin()
+        public void CheckWin(Player player)
         {
             bool won = true;
             foreach(var card in cards)
@@ -102,6 +102,11 @@ namespace ZusterNikki
                 }
             }
             Console.WriteLine(won);
+
+            if (won)
+            {
+                player.ReceiveScore(20);
+            }
             this.won = won;
         }
 
@@ -163,7 +168,7 @@ namespace ZusterNikki
         }
 
         //locks both the selected card as well as the paired card as pair found
-        public void Score(Card selectedCard)
+        public void Score(Card selectedCard, Player player)
         {
             //check if you have flipped two cards
             int j = 0;
@@ -183,7 +188,7 @@ namespace ZusterNikki
                     selectedCard.LockPairFound();
                     cards[selectedCard.PairedCard].LockPairFound();
 
-                    CheckWin();
+                    CheckWin(player);
                 }
             }
         }

@@ -68,7 +68,7 @@ namespace ZusterNikki
         //methods
 
         //guess function
-        public void Guess(string letter)
+        public void Guess(string letter, Player player)
         {
             bool alreadyGuessed = CheckAlreadyGuessed(letter);
             string newRevealedWord = "";
@@ -87,7 +87,7 @@ namespace ZusterNikki
                 newRevealedWord = newRevealedWord + character.ToString() + " ";
             }
             revealedWord = newRevealedWord;
-            checkWin();
+            checkWin(player);
         }
 
         //checks whether a letter has already been guessed
@@ -106,12 +106,18 @@ namespace ZusterNikki
         }
 
         //checks whether the word has been fully guessed
-        private void checkWin()
+        private void checkWin(Player player)
         {
             if(Word.Letters.SequenceEqual(Word.RevealedLetters))
             {
                 win = true;
+                AddScore(player);
             }
+        }
+
+        private void AddScore(Player player)
+        {
+            player.ReceiveScore(10);
         }
     }
 }
