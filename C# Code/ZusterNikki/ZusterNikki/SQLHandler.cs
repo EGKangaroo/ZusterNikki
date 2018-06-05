@@ -316,11 +316,19 @@ namespace ZusterNikki
                     {
                         while (reader.Read())
                         {
+                            int age = 0;
+                            string gender = null;
                             int id = reader.GetInt32(0);
                             string username = reader.GetString(2);
                             int score = reader.GetInt32(3);
-                            int age = reader.GetInt32(4);
-                            string gender = reader.GetString(5);
+                            if (!reader.IsDBNull(4))
+                            {
+                                age = reader.GetInt32(4);
+                            }
+                            if (!reader.IsDBNull(5))
+                            {
+                                gender = reader.GetString(5);
+                            }
                             player = new Player(id, username, score, age, gender);
                             return player;
                         }
