@@ -45,6 +45,7 @@
             this.Foutcounter = new System.Windows.Forms.Label();
             this.ResultaatLabel = new System.Windows.Forms.Label();
             this.OpnieuwBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // QuizTitelLabel
@@ -235,11 +236,21 @@
             this.OpnieuwBtn.Visible = false;
             this.OpnieuwBtn.Click += new System.EventHandler(this.OpnieuwBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(717, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "label1";
+            // 
             // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.OpnieuwBtn);
             this.Controls.Add(this.ResultaatLabel);
             this.Controls.Add(this.Foutcounter);
@@ -285,5 +296,6 @@
         private System.Windows.Forms.Label Foutcounter;
         private System.Windows.Forms.Label ResultaatLabel;
         private System.Windows.Forms.Button OpnieuwBtn;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ZusterNikki
 {
@@ -11,12 +12,14 @@ namespace ZusterNikki
         // Fields
         private QuizVragen NieuweVraag;
         private string vraag;
+        private int[] vragen;
         private string antwoorden;
         private string antwoord1;
         private string antwoord2;
         private string antwoord3;
         private string antwoord4;
         private string echteAntwoord;
+        public int bijgetal;
 
         // Properties
         public string Vraag
@@ -54,20 +57,30 @@ namespace ZusterNikki
         public QuizHandler()
         {
             NieuweVraag = new QuizVragen();
-            vraag = NieuweVraag.Vraag;
-            antwoorden = NieuweVraag.Antwoorden;
-            AntwoordenSeparator();
+            vragen = NieuweVraag.Getallen;
+            bijgetal = 0;
+            VraagAssignation();
         }
 
         // Methodes
-        public void AntwoordenSeparator()
+        public void AntwoordenSeparator(string DeAntwoorden)
         {
-            string[] AntwoordenNaarArray = antwoorden.Split(',');
+            string[] AntwoordenNaarArray = DeAntwoorden.Split(',');
             antwoord1 = AntwoordenNaarArray[1];
             antwoord2 = AntwoordenNaarArray[2];
             antwoord3 = AntwoordenNaarArray[3];
             antwoord4 = AntwoordenNaarArray[4];
             echteAntwoord = AntwoordenNaarArray[5];
+        }
+
+        public void VraagAssignation()
+        {
+            string[] Vragen = File.ReadAllLines(@"Quiz\QuizVragen.txt");
+            string[] Antwoorden = File.ReadAllLines(@"Quiz\QuizAntwoorden.txt");
+
+            vraag = Vragen[vragen[bijgetal]];
+            string CurrentAntwoorden = Antwoorden[vragen[bijgetal]];
+            AntwoordenSeparator(CurrentAntwoorden);
         }
     }
 }

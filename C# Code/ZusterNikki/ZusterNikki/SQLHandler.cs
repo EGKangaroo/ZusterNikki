@@ -10,7 +10,7 @@ namespace ZusterNikki
     class SQLHandler
     {
         //connstring
-        string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\EGKan\OneDrive\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\NikkiDB.mdf;Integrated Security=True";
+        string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ali\Documents\GitHub\ZusterNikki\C# Code\ZusterNikki\ZusterNikki\NikkiDB.mdf;Integrated Security=True";
 
         //constructor
         public SQLHandler(){}

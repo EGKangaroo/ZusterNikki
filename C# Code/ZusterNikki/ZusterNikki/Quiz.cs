@@ -23,9 +23,9 @@ namespace ZusterNikki
         int Juist;
         int juistgeantwoord;
         int foutgeantwoord;
-        private QuizVragen NieuweVraag;
 
         private QuizHandler newGame;
+
         public Quiz(Player player)
         {
             InitializeComponent();
@@ -66,7 +66,8 @@ namespace ZusterNikki
             Goedcounter.Visible = true;
             TerugBtn.Visible = false;
             OpnieuwBtn.Visible = false;
-            
+            newGame = new QuizHandler();
+
             Updater();
         }
 
@@ -101,13 +102,10 @@ namespace ZusterNikki
             ResultaatLabel.Text = "";
             ResultaatLabel.Visible = false;
             OpnieuwBtn.Visible = false;
-            
-
         }
 
         private void Updater()
         {
-            newGame = new QuizHandler();
             VraagLabel.Text = newGame.Vraag;
             Antwoord1Btn.Text = newGame.Antwoord1;
             Antwoord2Btn.Text = newGame.Antwoord2;
@@ -130,7 +128,6 @@ namespace ZusterNikki
                 Juist = -1;
                 Gewonnen();
             }
-
         }
 
         private void Antwoord2Btn_Click(object sender, EventArgs e)
@@ -189,6 +186,8 @@ namespace ZusterNikki
                 juistgeantwoord++;
                 foutgeantwoord--;
                 counterGoed.Text = juistgeantwoord.ToString();
+                naElkeVraag();
+                newGame.bijgetal = newGame.bijgetal - 1;
                 Updater();
             }
             else
@@ -199,6 +198,7 @@ namespace ZusterNikki
                 gekozen4 = 0;
                 foutgeantwoord++;
                 CounterFout.Text = foutgeantwoord.ToString();
+                naElkeVraag();
                 Updater();
             }
             if (juistgeantwoord == 10 || foutgeantwoord == 10 || juistgeantwoord + foutgeantwoord == 10)
@@ -217,7 +217,11 @@ namespace ZusterNikki
                 ResultaatLabel.Text = "Je hebt er " + juistgeantwoord + " goed.";
                 OpnieuwBtn.Visible = true;
                 TerugNaarQuizMenuBtn.Visible = true;
+                int score = juistgeantwoord * 5;
+                AddScore(player, score);
+
             }
+            label1.Text = "dit" + newGame.bijgetal;
         }
 
         private void OpnieuwBtn_Click(object sender, EventArgs e)
@@ -254,7 +258,19 @@ namespace ZusterNikki
             Juist = 0;
             juistgeantwoord = 0;
             foutgeantwoord = 0;
+            newGame.bijgetal = 0;
             Updater();
+        }
+
+        private void naElkeVraag()
+        {
+                newGame.bijgetal = newGame.bijgetal + 1;
+                newGame.VraagAssignation();
+        }
+
+        private void AddScore(Player player, int score)
+        {
+            player.ReceiveScore(score);
         }
 
         private void Quiz_Load(object sender, EventArgs e)

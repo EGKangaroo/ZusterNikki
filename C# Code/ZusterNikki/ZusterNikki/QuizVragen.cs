@@ -9,40 +9,39 @@ namespace ZusterNikki
 {
     class QuizVragen
     {
-        private string vraag;
+        private int[] getallen;
         private string antwoorden;
         int i;
 
-        public string Vraag
+        public int[] Getallen
         {
-            get { return vraag; }
-        }
-
-        public string Antwoorden
-        {
-            get { return antwoorden; }
+            get { return getallen; }
         }
 
         public QuizVragen()
         {
-            vraag = KiesNieuweVraag();
-            antwoorden = SelecteerAntwoorden(i);
+            getallen = KiesNieuweVraag();
         }
 
-        public string KiesNieuweVraag()
+        public int[] KiesNieuweVraag()
         {
+            int[] RandomGetal = {9000, 9001, 9002, 9003, 9004, 9005, 9006, 9007, 9008, 9009, 9010, 9011};
             Random rand = new Random();
-            i = rand.Next(1, 50);
-            string[] LeesVraag = File.ReadAllLines(@"Quiz\QuizVragen.txt");
-            string GekozenVraag = LeesVraag[i];
-            return GekozenVraag;
-        }
-
-        public string SelecteerAntwoorden(int a)
-        {
-            string[] LeesAntwoord = File.ReadAllLines(@"Quiz\QuizAntwoorden.txt");
-            string GekozenAntwoord = LeesAntwoord[i];
-            return GekozenAntwoord;
+            string[] hoeveelheid = File.ReadAllLines(@"Quiz\QuizVragen.txt");
+            for (int i = 0; i < 11;)
+            {
+                int generated = rand.Next(0, hoeveelheid.Length);
+                if (RandomGetal.Contains(generated))
+                {
+                    continue;
+                }
+                else
+                {
+                    RandomGetal[i] = generated;
+                    i++;
+                }
+            }
+            return RandomGetal;
         }
 
     }
