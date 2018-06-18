@@ -58,10 +58,10 @@
             this.GalgjeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.GalgjeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.GalgjeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GalgjeBtn.Location = new System.Drawing.Point(619, 67);
+            this.GalgjeBtn.Location = new System.Drawing.Point(626, 67);
             this.GalgjeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.GalgjeBtn.Name = "GalgjeBtn";
-            this.GalgjeBtn.Size = new System.Drawing.Size(109, 214);
+            this.GalgjeBtn.Size = new System.Drawing.Size(133, 214);
             this.GalgjeBtn.TabIndex = 1;
             this.GalgjeBtn.UseVisualStyleBackColor = false;
             this.GalgjeBtn.Click += new System.EventHandler(this.GalgjeBtn_Click);
@@ -75,10 +75,10 @@
             this.QuizBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.QuizBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.QuizBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuizBtn.Location = new System.Drawing.Point(208, 67);
+            this.QuizBtn.Location = new System.Drawing.Point(195, 67);
             this.QuizBtn.Margin = new System.Windows.Forms.Padding(4);
             this.QuizBtn.Name = "QuizBtn";
-            this.QuizBtn.Size = new System.Drawing.Size(113, 214);
+            this.QuizBtn.Size = new System.Drawing.Size(126, 214);
             this.QuizBtn.TabIndex = 2;
             this.QuizBtn.UseVisualStyleBackColor = false;
             this.QuizBtn.Click += new System.EventHandler(this.QuizBtn_Click);
@@ -92,10 +92,10 @@
             this.AdlibBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdlibBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdlibBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdlibBtn.Location = new System.Drawing.Point(49, 67);
+            this.AdlibBtn.Location = new System.Drawing.Point(13, 67);
             this.AdlibBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AdlibBtn.Name = "AdlibBtn";
-            this.AdlibBtn.Size = new System.Drawing.Size(112, 214);
+            this.AdlibBtn.Size = new System.Drawing.Size(148, 214);
             this.AdlibBtn.TabIndex = 3;
             this.AdlibBtn.UseVisualStyleBackColor = false;
             this.AdlibBtn.Click += new System.EventHandler(this.AdlibBtn_Click);
@@ -109,7 +109,7 @@
             this.UitlogBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.UitlogBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.UitlogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UitlogBtn.Location = new System.Drawing.Point(31, 498);
+            this.UitlogBtn.Location = new System.Drawing.Point(13, 498);
             this.UitlogBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UitlogBtn.Name = "UitlogBtn";
             this.UitlogBtn.Size = new System.Drawing.Size(150, 28);
@@ -128,7 +128,7 @@
             this.BTNMemorySelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNMemorySelect.Location = new System.Drawing.Point(458, 67);
             this.BTNMemorySelect.Name = "BTNMemorySelect";
-            this.BTNMemorySelect.Size = new System.Drawing.Size(114, 214);
+            this.BTNMemorySelect.Size = new System.Drawing.Size(126, 214);
             this.BTNMemorySelect.TabIndex = 5;
             this.BTNMemorySelect.UseVisualStyleBackColor = false;
             this.BTNMemorySelect.Click += new System.EventHandler(this.BTNMemorySelect_Click);
@@ -137,7 +137,7 @@
             // 
             this.LBLGreetingText.AutoSize = true;
             this.LBLGreetingText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLGreetingText.Location = new System.Drawing.Point(480, 380);
+            this.LBLGreetingText.Location = new System.Drawing.Point(499, 392);
             this.LBLGreetingText.Name = "LBLGreetingText";
             this.LBLGreetingText.Size = new System.Drawing.Size(125, 25);
             this.LBLGreetingText.TabIndex = 6;
@@ -146,7 +146,7 @@
             // LBLScore
             // 
             this.LBLScore.AutoSize = true;
-            this.LBLScore.Location = new System.Drawing.Point(480, 432);
+            this.LBLScore.Location = new System.Drawing.Point(499, 444);
             this.LBLScore.Name = "LBLScore";
             this.LBLScore.Size = new System.Drawing.Size(76, 17);
             this.LBLScore.TabIndex = 7;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::ZusterNikki.Properties.Resources.BG_ZusterNikkiApp_Menu;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.LBLScore);
             this.Controls.Add(this.LBLGreetingText);

@@ -69,5 +69,45 @@ namespace ZusterNikki.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG1_ZusterNikkiApp_Memory {
+            get {
+                object obj = ResourceManager.GetObject("BG1_ZusterNikkiApp_Memory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG1_ZusterNikkiApp_Quiz {
+            get {
+                object obj = ResourceManager.GetObject("BG1_ZusterNikkiApp_Quiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG1_ZusterNikkiApp_Verhaaltje {
+            get {
+                object obj = ResourceManager.GetObject("BG1_ZusterNikkiApp_Verhaaltje", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG1_ZusterNikkiApp_Woordspel {
+            get {
+                object obj = ResourceManager.GetObject("BG1_ZusterNikkiApp_Woordspel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

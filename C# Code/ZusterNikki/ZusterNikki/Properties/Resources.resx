@@ -121,4 +121,16 @@
   <data name="BG_ZusterNikkiApp_Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG_ZusterNikkiApp_Menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BG1_ZusterNikkiApp_Memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG1_ZusterNikkiApp_Memory.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG1_ZusterNikkiApp_Quiz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG1_ZusterNikkiApp_Quiz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG1_ZusterNikkiApp_Verhaaltje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG1_ZusterNikkiApp_Verhaaltje.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG1_ZusterNikkiApp_Woordspel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG1_ZusterNikkiApp_Woordspel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

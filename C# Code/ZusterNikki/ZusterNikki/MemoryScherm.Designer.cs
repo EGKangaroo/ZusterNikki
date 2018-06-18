@@ -61,6 +61,7 @@
             // 
             // TLPMain
             // 
+            this.TLPMain.BackColor = System.Drawing.Color.Transparent;
             this.TLPMain.ColumnCount = 4;
             this.TLPMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.TLPMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -397,6 +398,8 @@
             // MemoryScherm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::ZusterNikki.Properties.Resources.BG1_ZusterNikkiApp_Memory;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.TLPMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
