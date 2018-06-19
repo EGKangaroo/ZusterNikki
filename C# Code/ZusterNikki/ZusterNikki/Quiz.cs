@@ -26,62 +26,30 @@ namespace ZusterNikki
 
         private QuizHandler newGame;
 
+        // Constructor
         public Quiz(Player player)
         {
             InitializeComponent();
             this.player = player;
-            QuizTitelLabel.Visible = true;
-            QuizTitelLabel.Text = "Quiz";
-            QuizTitelLabel.Location = new Point(304, 103);
-            UitlegQuizBtn.Visible = true;
-            UitlegQuizBtn.Location = new Point(267, 250);
-            StartQuizBtn.Visible = true;
-            StartQuizBtn.Location = new Point(267, 356);
-            TerugBtn.Visible = true;
-            TerugBtn.Location = new Point(653, 482);
         }
 
         private void StartQuizBtn_Click(object sender, EventArgs e)
         {
-            counterGoed.Text = "";
-            CounterFout.Text = "";
-            juistgeantwoord = 0;
-            foutgeantwoord = 0;
-            StartQuizBtn.Visible = false;
-            UitlegQuizBtn.Visible = false;
-            QuizTitelLabel.Visible = false;
-            VraagLabel.Visible = true;
-            VraagLabel.Location = new Point(50, 70);
-            Antwoord1Btn.Visible = true;
-            Antwoord1Btn.Location = new Point(200, 200);
-            Antwoord2Btn.Visible = true;
-            Antwoord2Btn.Location = new Point(370, 200);
-            Antwoord3Btn.Visible = true;
-            Antwoord3Btn.Location = new Point(200, 370);
-            Antwoord4Btn.Visible = true;
-            Antwoord4Btn.Location = new Point(370, 370);
-            counterGoed.Visible = true;
-            CounterFout.Visible = true;
-            Foutcounter.Visible = true;
-            Goedcounter.Visible = true;
-            TerugBtn.Visible = false;
-            OpnieuwBtn.Visible = false;
+            MainScreenGBox.Visible = false;
+            MainScreenGBox.Location = new Point(800, 800);
+            ActiveQuizGBox.Visible = true;
+            ActiveQuizGBox.Location = new Point(12, 12);
             newGame = new QuizHandler();
-
             Updater();
         }
 
         private void UitlegQuizBtn_Click(object sender, EventArgs e)
         {
-            TerugNaarQuizMenuBtn.Visible = true;
-            TerugNaarQuizMenuBtn.Location = new Point(653, 482);
             QuizUitlegLabel.Text = "De quiz bestaat uit 10 vragen. Zodra je op start drukt krijg jij je eerste \r\nvraag. Daar onder zie je 4 opties. een van die opties \r\nis de juiste. Het is aan jou om er achter te komen welke \r\ndat is. Na dat je alle 10 vragen beantwoord hebt, \r\nkrijg je te zien hoeveel van de vragen jij fout hebt beantwoord.";
-            QuizUitlegLabel.Visible = true;
-            QuizUitlegLabel.Location = new Point(50, 70);
-            StartQuizBtn.Visible = false;
-            UitlegQuizBtn.Visible = false;
-            QuizTitelLabel.Visible = false;
-            TerugBtn.Visible = false;
+            MainScreenGBox.Visible = false;
+            MainScreenGBox.Location = new Point(800, 800);
+            UitlegGBox.Visible = true;
+            UitlegGBox.Location = new Point(12, 12);
         }
 
         private void TerugBtn_Click(object sender, EventArgs e)
@@ -93,15 +61,10 @@ namespace ZusterNikki
 
         private void TerugNaarQuizMenuBtn_Click(object sender, EventArgs e)
         {
-            TerugNaarQuizMenuBtn.Visible = false;
-            QuizUitlegLabel.Visible = false;
-            QuizTitelLabel.Visible = true;
-            UitlegQuizBtn.Visible = true;
-            StartQuizBtn.Visible = true;
-            TerugBtn.Visible = true;
-            ResultaatLabel.Text = "";
-            ResultaatLabel.Visible = false;
-            OpnieuwBtn.Visible = false;
+            UitlegGBox.Visible = false;
+            UitlegGBox.Location = new Point(800, 800);
+            MainScreenGBox.Visible = true;
+            MainScreenGBox.Location = new Point(12, 12);
         }
 
         private void Updater()
@@ -121,13 +84,12 @@ namespace ZusterNikki
             if (gekozen1.ToString() == CorrecteAntwoord)
             {
                 Juist = 1;
-                Gewonnen();
             }
-            if (gekozen1.ToString() != CorrecteAntwoord)
+            else
             {
                 Juist = -1;
-                Gewonnen();
             }
+            Gewonnen();
         }
 
         private void Antwoord2Btn_Click(object sender, EventArgs e)
@@ -136,13 +98,12 @@ namespace ZusterNikki
             if (gekozen2.ToString() == CorrecteAntwoord)
             {
                 Juist = 1;
-                Gewonnen();
             }
-            if (gekozen2.ToString() != CorrecteAntwoord)
+            else
             {
                 Juist = -1;
-                Gewonnen();
             }
+            Gewonnen();
         }
 
         private void Antwoord3Btn_Click(object sender, EventArgs e)
@@ -151,13 +112,12 @@ namespace ZusterNikki
             if (gekozen3.ToString() == CorrecteAntwoord)
             {
                 Juist = 1;
-                Gewonnen();
             }
-            if (gekozen3.ToString() != CorrecteAntwoord)
+            else
             {
                 Juist = -1;
-                Gewonnen();
             }
+            Gewonnen();
         }
 
         private void Antwoord4Btn_Click(object sender, EventArgs e)
@@ -166,13 +126,12 @@ namespace ZusterNikki
             if (gekozen4.ToString() == CorrecteAntwoord)
             {
                 Juist = 1;
-                Gewonnen();
             }
-            if (gekozen4.ToString() != CorrecteAntwoord)
+            else
             {
                 Juist = -1;
-                Gewonnen();
             }
+            Gewonnen();
         }
 
         private void Gewonnen()
@@ -184,13 +143,16 @@ namespace ZusterNikki
                 gekozen3 = 0;
                 gekozen4 = 0;
                 juistgeantwoord++;
-                foutgeantwoord--;
                 counterGoed.Text = juistgeantwoord.ToString();
-                naElkeVraag();
-                newGame.bijgetal = newGame.bijgetal - 1;
+
+                if (newGame.bijgetal < 11)
+                {
+                    naElkeVraag();
+                }
+                
                 Updater();
             }
-            else
+            else if (Juist != 1)
             {
                 gekozen1 = 0;
                 gekozen2 = 0;
@@ -198,30 +160,31 @@ namespace ZusterNikki
                 gekozen4 = 0;
                 foutgeantwoord++;
                 CounterFout.Text = foutgeantwoord.ToString();
-                naElkeVraag();
+
+                if (newGame.bijgetal < 11)
+                {
+                    naElkeVraag();
+                }
+
                 Updater();
             }
             if (juistgeantwoord == 10 || foutgeantwoord == 10 || juistgeantwoord + foutgeantwoord == 10)
             {
-                VraagLabel.Visible = false;
-                Antwoord1Btn.Visible = false;
-                Antwoord2Btn.Visible = false;
-                Antwoord3Btn.Visible = false;
-                Antwoord4Btn.Visible = false;
-                counterGoed.Visible = false;
-                CounterFout.Visible = false;
-                Foutcounter.Visible = false;
-                Goedcounter.Visible = false;
-                ResultaatLabel.Visible = true;
-                ResultaatLabel.Location = new Point(200, 200);
+                ActiveQuizGBox.Visible = false;
+                ActiveQuizGBox.Location = new Point(800, 800);
+                ResultaatGBox.Visible = true;
+                ResultaatGBox.Location = new Point(12, 12);
                 ResultaatLabel.Text = "Je hebt er " + juistgeantwoord + " goed.";
-                OpnieuwBtn.Visible = true;
-                TerugNaarQuizMenuBtn.Visible = true;
                 int score = juistgeantwoord * 5;
                 AddScore(player, score);
-
+                counterGoed.Text = "";
+                CounterFout.Text = "";
+                juistgeantwoord = 0;
+                foutgeantwoord = 0;
+                juistgeantwoord = 0;
+                foutgeantwoord = 0;
+                newGame.bijgetal = 0;
             }
-            label1.Text = "dit" + newGame.bijgetal;
         }
 
         private void OpnieuwBtn_Click(object sender, EventArgs e)
@@ -230,35 +193,15 @@ namespace ZusterNikki
             CounterFout.Text = "";
             juistgeantwoord = 0;
             foutgeantwoord = 0;
-            StartQuizBtn.Visible = false;
-            UitlegQuizBtn.Visible = false;
-            QuizTitelLabel.Visible = false;
-            VraagLabel.Visible = true;
-            VraagLabel.Location = new Point(50, 70);
-            Antwoord1Btn.Visible = true;
-            Antwoord1Btn.Location = new Point(200, 200);
-            Antwoord2Btn.Visible = true;
-            Antwoord2Btn.Location = new Point(370, 200);
-            Antwoord3Btn.Visible = true;
-            Antwoord3Btn.Location = new Point(200, 370);
-            Antwoord4Btn.Visible = true;
-            Antwoord4Btn.Location = new Point(370, 370);
-            counterGoed.Visible = true;
-            CounterFout.Visible = true;
-            Foutcounter.Visible = true;
-            Goedcounter.Visible = true;
-            TerugBtn.Visible = false;
-            OpnieuwBtn.Visible = false;
             ResultaatLabel.Text = "";
-            TerugNaarQuizMenuBtn.Visible = false;
-            gekozen1 = 0;
-            gekozen2 = 0;
-            gekozen3 = 0;
-            gekozen4 = 0;
-            Juist = 0;
             juistgeantwoord = 0;
             foutgeantwoord = 0;
             newGame.bijgetal = 0;
+            ResultaatGBox.Visible = false;
+            ResultaatGBox.Location = new Point(800, 800);
+            ActiveQuizGBox.Visible = true;
+            ActiveQuizGBox.Location = new Point(12, 12);
+            newGame.NieuweVragen();
             Updater();
         }
 
@@ -276,6 +219,14 @@ namespace ZusterNikki
         private void Quiz_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TerugMainBtn_Click(object sender, EventArgs e)
+        {
+            ResultaatGBox.Visible = false;
+            ResultaatGBox.Location = new Point(800, 800);
+            MainScreenGBox.Visible = true;
+            MainScreenGBox.Location = new Point(12, 12);
         }
     }
 }

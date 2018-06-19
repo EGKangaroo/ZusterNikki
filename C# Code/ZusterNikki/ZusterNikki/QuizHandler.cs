@@ -13,7 +13,6 @@ namespace ZusterNikki
         private QuizVragen NieuweVraag;
         private string vraag;
         private int[] vragen;
-        private string antwoorden;
         private string antwoord1;
         private string antwoord2;
         private string antwoord3;
@@ -77,10 +76,20 @@ namespace ZusterNikki
         {
             string[] Vragen = File.ReadAllLines(@"Quiz\QuizVragen.txt");
             string[] Antwoorden = File.ReadAllLines(@"Quiz\QuizAntwoorden.txt");
+            int a = Antwoorden.Length;
+            int b = Vragen.Length;
+            int b1 = bijgetal;
+            int c = vragen[bijgetal];
+            string d = Vragen[vragen[bijgetal]];
 
             vraag = Vragen[vragen[bijgetal]];
             string CurrentAntwoorden = Antwoorden[vragen[bijgetal]];
             AntwoordenSeparator(CurrentAntwoorden);
+        }
+
+        public void NieuweVragen()
+        {
+            NieuweVraag.NieuweVragen1();
         }
     }
 }

@@ -9,16 +9,26 @@ namespace ZusterNikki
 {
     class QuizVragen
     {
+        // Fields
         private int[] getallen;
-        private string antwoorden;
-        int i;
 
+        // Properties
         public int[] Getallen
         {
             get { return getallen; }
         }
 
+        // Constructor
         public QuizVragen()
+        {
+            getallen = KiesNieuweVraag();
+        }
+
+
+
+        // Methodes
+        // Zorgt er voor dat Getallen nieuwe waarden krijgen
+        public void NieuweVragen1()
         {
             getallen = KiesNieuweVraag();
         }
@@ -43,6 +53,5 @@ namespace ZusterNikki
             }
             return RandomGetal;
         }
-
     }
 }
