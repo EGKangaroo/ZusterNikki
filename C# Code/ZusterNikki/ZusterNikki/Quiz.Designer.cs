@@ -59,8 +59,9 @@
             // QuizTitelLabel
             // 
             this.QuizTitelLabel.AutoSize = true;
+            this.QuizTitelLabel.BackColor = System.Drawing.Color.Transparent;
             this.QuizTitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuizTitelLabel.Location = new System.Drawing.Point(325, 90);
+            this.QuizTitelLabel.Location = new System.Drawing.Point(323, 88);
             this.QuizTitelLabel.Name = "QuizTitelLabel";
             this.QuizTitelLabel.Size = new System.Drawing.Size(122, 55);
             this.QuizTitelLabel.TabIndex = 0;
@@ -90,7 +91,7 @@
             // 
             // TerugBtn
             // 
-            this.TerugBtn.Location = new System.Drawing.Point(638, 467);
+            this.TerugBtn.Location = new System.Drawing.Point(5, 467);
             this.TerugBtn.Name = "TerugBtn";
             this.TerugBtn.Size = new System.Drawing.Size(119, 67);
             this.TerugBtn.TabIndex = 3;
@@ -101,6 +102,7 @@
             // QuizUitlegLabel
             // 
             this.QuizUitlegLabel.AutoSize = true;
+            this.QuizUitlegLabel.BackColor = System.Drawing.Color.Transparent;
             this.QuizUitlegLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuizUitlegLabel.Location = new System.Drawing.Point(61, 114);
             this.QuizUitlegLabel.Name = "QuizUitlegLabel";
@@ -111,7 +113,7 @@
             // 
             // TerugNaarQuizMenuBtn
             // 
-            this.TerugNaarQuizMenuBtn.Location = new System.Drawing.Point(638, 470);
+            this.TerugNaarQuizMenuBtn.Location = new System.Drawing.Point(5, 470);
             this.TerugNaarQuizMenuBtn.Name = "TerugNaarQuizMenuBtn";
             this.TerugNaarQuizMenuBtn.Size = new System.Drawing.Size(119, 64);
             this.TerugNaarQuizMenuBtn.TabIndex = 5;
@@ -122,6 +124,7 @@
             // VraagLabel
             // 
             this.VraagLabel.AutoSize = true;
+            this.VraagLabel.BackColor = System.Drawing.Color.Transparent;
             this.VraagLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VraagLabel.Location = new System.Drawing.Point(107, 88);
             this.VraagLabel.Name = "VraagLabel";
@@ -172,6 +175,7 @@
             // counterGoed
             // 
             this.counterGoed.AutoSize = true;
+            this.counterGoed.BackColor = System.Drawing.Color.Transparent;
             this.counterGoed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.counterGoed.Location = new System.Drawing.Point(287, 421);
             this.counterGoed.Name = "counterGoed";
@@ -181,6 +185,7 @@
             // CounterFout
             // 
             this.CounterFout.AutoSize = true;
+            this.CounterFout.BackColor = System.Drawing.Color.Transparent;
             this.CounterFout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CounterFout.Location = new System.Drawing.Point(287, 455);
             this.CounterFout.Name = "CounterFout";
@@ -190,6 +195,7 @@
             // Goedcounter
             // 
             this.Goedcounter.AutoSize = true;
+            this.Goedcounter.BackColor = System.Drawing.Color.Transparent;
             this.Goedcounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Goedcounter.Location = new System.Drawing.Point(214, 421);
             this.Goedcounter.Name = "Goedcounter";
@@ -200,6 +206,7 @@
             // Foutcounter
             // 
             this.Foutcounter.AutoSize = true;
+            this.Foutcounter.BackColor = System.Drawing.Color.Transparent;
             this.Foutcounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Foutcounter.Location = new System.Drawing.Point(214, 455);
             this.Foutcounter.Name = "Foutcounter";
@@ -210,6 +217,7 @@
             // ResultaatLabel
             // 
             this.ResultaatLabel.AutoSize = true;
+            this.ResultaatLabel.BackColor = System.Drawing.Color.Transparent;
             this.ResultaatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultaatLabel.Location = new System.Drawing.Point(194, 122);
             this.ResultaatLabel.Name = "ResultaatLabel";
@@ -219,7 +227,7 @@
             // 
             // OpnieuwBtn
             // 
-            this.OpnieuwBtn.Location = new System.Drawing.Point(682, 479);
+            this.OpnieuwBtn.Location = new System.Drawing.Point(84, 478);
             this.OpnieuwBtn.Name = "OpnieuwBtn";
             this.OpnieuwBtn.Size = new System.Drawing.Size(75, 55);
             this.OpnieuwBtn.TabIndex = 16;
@@ -229,12 +237,14 @@
             // 
             // UitlegGBox
             // 
+            this.UitlegGBox.BackgroundImage = global::ZusterNikki.Properties.Resources.BG1_ZusterNikkiApp_Quiz;
+            this.UitlegGBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UitlegGBox.Controls.Add(this.QuizUitlegLabel);
             this.UitlegGBox.Controls.Add(this.TerugNaarQuizMenuBtn);
-            this.UitlegGBox.Location = new System.Drawing.Point(109, 637);
-            this.UitlegGBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UitlegGBox.Location = new System.Drawing.Point(209, 604);
+            this.UitlegGBox.Margin = new System.Windows.Forms.Padding(2);
             this.UitlegGBox.Name = "UitlegGBox";
-            this.UitlegGBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UitlegGBox.Padding = new System.Windows.Forms.Padding(2);
             this.UitlegGBox.Size = new System.Drawing.Size(762, 539);
             this.UitlegGBox.TabIndex = 17;
             this.UitlegGBox.TabStop = false;
@@ -242,14 +252,17 @@
             // 
             // MainScreenGBox
             // 
+            this.MainScreenGBox.BackColor = System.Drawing.Color.MintCream;
+            this.MainScreenGBox.BackgroundImage = global::ZusterNikki.Properties.Resources.BG1_ZusterNikkiApp_Quiz;
+            this.MainScreenGBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainScreenGBox.Controls.Add(this.UitlegQuizBtn);
             this.MainScreenGBox.Controls.Add(this.StartQuizBtn);
             this.MainScreenGBox.Controls.Add(this.TerugBtn);
             this.MainScreenGBox.Controls.Add(this.QuizTitelLabel);
             this.MainScreenGBox.Location = new System.Drawing.Point(11, 11);
-            this.MainScreenGBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainScreenGBox.Margin = new System.Windows.Forms.Padding(2);
             this.MainScreenGBox.Name = "MainScreenGBox";
-            this.MainScreenGBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainScreenGBox.Padding = new System.Windows.Forms.Padding(0);
             this.MainScreenGBox.Size = new System.Drawing.Size(762, 539);
             this.MainScreenGBox.TabIndex = 18;
             this.MainScreenGBox.TabStop = false;
@@ -257,6 +270,8 @@
             // 
             // ActiveQuizGBox
             // 
+            this.ActiveQuizGBox.BackgroundImage = global::ZusterNikki.Properties.Resources.BG1_ZusterNikkiApp_Quiz;
+            this.ActiveQuizGBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActiveQuizGBox.Controls.Add(this.Antwoord1Btn);
             this.ActiveQuizGBox.Controls.Add(this.Antwoord2Btn);
             this.ActiveQuizGBox.Controls.Add(this.Antwoord3Btn);
@@ -266,10 +281,10 @@
             this.ActiveQuizGBox.Controls.Add(this.Goedcounter);
             this.ActiveQuizGBox.Controls.Add(this.counterGoed);
             this.ActiveQuizGBox.Controls.Add(this.CounterFout);
-            this.ActiveQuizGBox.Location = new System.Drawing.Point(11, 674);
-            this.ActiveQuizGBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActiveQuizGBox.Location = new System.Drawing.Point(71, 663);
+            this.ActiveQuizGBox.Margin = new System.Windows.Forms.Padding(2);
             this.ActiveQuizGBox.Name = "ActiveQuizGBox";
-            this.ActiveQuizGBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActiveQuizGBox.Padding = new System.Windows.Forms.Padding(2);
             this.ActiveQuizGBox.Size = new System.Drawing.Size(762, 539);
             this.ActiveQuizGBox.TabIndex = 19;
             this.ActiveQuizGBox.TabStop = false;
@@ -277,13 +292,15 @@
             // 
             // ResultaatGBox
             // 
+            this.ResultaatGBox.BackgroundImage = global::ZusterNikki.Properties.Resources.BG1_ZusterNikkiApp_Quiz;
+            this.ResultaatGBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ResultaatGBox.Controls.Add(this.TerugMainBtn);
             this.ResultaatGBox.Controls.Add(this.OpnieuwBtn);
             this.ResultaatGBox.Controls.Add(this.ResultaatLabel);
-            this.ResultaatGBox.Location = new System.Drawing.Point(875, 655);
-            this.ResultaatGBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResultaatGBox.Location = new System.Drawing.Point(1007, 694);
+            this.ResultaatGBox.Margin = new System.Windows.Forms.Padding(2);
             this.ResultaatGBox.Name = "ResultaatGBox";
-            this.ResultaatGBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResultaatGBox.Padding = new System.Windows.Forms.Padding(2);
             this.ResultaatGBox.Size = new System.Drawing.Size(762, 539);
             this.ResultaatGBox.TabIndex = 20;
             this.ResultaatGBox.TabStop = false;
@@ -291,8 +308,8 @@
             // 
             // TerugMainBtn
             // 
-            this.TerugMainBtn.Location = new System.Drawing.Point(602, 479);
-            this.TerugMainBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TerugMainBtn.Location = new System.Drawing.Point(4, 478);
+            this.TerugMainBtn.Margin = new System.Windows.Forms.Padding(2);
             this.TerugMainBtn.Name = "TerugMainBtn";
             this.TerugMainBtn.Size = new System.Drawing.Size(75, 55);
             this.TerugMainBtn.TabIndex = 17;
